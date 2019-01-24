@@ -1,0 +1,383 @@
+﻿body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 800px;
+}
+.BankCardall {
+    width: 800px;
+    height: auto;
+}
+.BankCardall .titlebar {
+        width: 800px;
+        height: 95px;
+        background-color: #84909C;
+        text-align:center;
+        position: relative;
+    }
+     .BankCardall .titlebar .title{
+        width: 800px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        background-color: #84909C;
+    }
+    .BankCardall .titlebar .title span {
+        font-size: 28px;
+        color: #FFFFFF;
+        margin-left: 70px;
+        font-family: '微軟正黑體';
+    }
+        .BankCardall .titlebar .list {
+            width: 730px;
+            height: 30px;
+            background-color: #84909C;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+            .BankCardall .titlebar .list .spanbtn {
+                text-align: left;
+                font-family: '微軟正黑體';
+                font-size: 15px;
+                color: #FFFFFF;
+                margin-left:35px;
+            }
+    .BankCardall .contentbg {
+        width: 800px;
+        height: 440px;
+        background-image: url(../images/allbg.jpg);
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+        .BankCardall .contentbg .content {
+            width: 730px;
+            height: 410px;
+            background-color: #F7F7F7;
+            margin: 0 auto;
+            border-radius: 0px 0px 5px 5px;
+            text-align: center;
+        }
+            .BankCardall .contentbg .content .step {
+                width: 730px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                background-color: #e1e0e0;
+            }
+                .BankCardall .contentbg .content .step div {
+                    width: 243px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    background-color: #e1e0e0;
+                    justify-content: center;
+                }
+                    .BankCardall .contentbg .content .step div .span1 {
+                        text-align: center;
+                        font-size: 15px;
+                        color: #a940a0;
+                        font-family: '微軟正黑體';
+                    }
+                    .BankCardall .contentbg .content .step div .span2 {
+                        text-align: center;
+                        font-size: 15px;
+                        color: #1a3c50;
+                        font-family: '微軟正黑體';
+                    }
+            .BankCardall .contentbg .content .remind {
+                width: 730px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+            }
+                .BankCardall .contentbg .content .remind span {
+                    text-align: center;
+                    font-size: 12px;
+                    color: #a940a0;
+                    font-family: '微軟正黑體';
+                    margin-left:75px;
+                }
+            .BankCardall .contentbg .content .items {
+                width: 730px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+            }
+            .BankCardall .contentbg .content .items .span1 {
+                color: #1a3c50;
+                font-size: 14px;
+                font-family: '微軟正黑體';
+                margin-left: 0px;
+                float: left;
+                display:block;
+                width: 120px;
+                text-align: right;
+                padding-right: 5px;
+            }
+            .BankCardall .contentbg .content .items select {
+                margin-left: 10px;
+                width: 156px;
+                height: 26px;
+                padding: 0;
+                padding-left: 10px;
+                display: inline-block;
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-image: none;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: .25rem;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+            .BankCardall .contentbg .content  .items .textbox1 {
+                font-family: '微軟正黑體';
+                margin-left: 10px;
+                width: 156px;
+                height: 26px;
+                padding: 0;
+                padding-left: 10px;
+                display: inline-block;
+                font-size: 12px;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-image: none;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: .25rem;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+            
+            .BankCardall .contentbg .content .spanbtn {
+                display: block;
+                width: 170px;
+                height: 25px;
+                line-height: 25px;
+                text-align: center;
+                font-family: '微軟正黑體';
+                font-size: 14px;
+                color: #FFFFFF;
+            }
+            .BankCardall .contentbg .content  .abtn {
+                display: block;
+                width: 170px;
+                height: 25px;
+                border-radius: 5px;
+                background-color: #43505C;
+                margin-left: 130px;
+                margin-top:5px;
+                transition: opacity 0.3s;
+            }
+            .BankCardall .contentbg .content  .abtn:hover,.BankCardall .contentbg .content  .abtnSetting:hover {
+                opacity: 0.5;
+                text-decoration: none;
+                color: white;
+            }
+            .BankCardall .contentbg .content  .abtnSetting {
+                display: block;
+                width: 170px;
+                height: 25px;
+                line-height: 25px;
+                border-radius: 5px;
+                background-color: #43505C;
+                color: white;
+                margin: 0 auto;
+                margin-top:45px;
+                transition: opacity 0.3s;
+            }
+            .BankCardall .contentbg .content  .abtn:hover{
+                opacity: 0.5;
+            }
+            .BankCardall .contentbg .content  .btnSetting1-4{
+                display: inline-block;
+                text-align: center;
+                width: 140px;
+                margin-left: 0px;
+            }
+            .BankCardall .contentbg .content  .btnSetting1-5{
+                margin: 0 auto;
+                margin-top: 5px;
+            }
+            .BankCardall .contentbg .content  .btnSpanSetting{
+                width: auto;
+            }
+            .BankCardall .contentbg .content .items .spanSetting {
+                width: auto;
+                text-align: left;
+            }
+            .listTitle{
+                width: 670px;
+                margin: 0 auto;
+            }
+            .listTitle div{
+                background-color: #a1b6c9;
+                color: #354f60;
+                border: 2px #505960 solid;
+                float: left;
+                border-right: none;
+                border-bottom: none;
+                text-align: center;
+                height: 31px;
+                line-height: 31px;
+            }
+            .listTitle .name{
+                width: 64px;
+            }
+            .listTitle .bank{
+                width: 176px;
+            }
+            .listTitle .ad{
+                width: 216px;
+            }
+            .listTitle .ac{
+                width: 136px;
+            }
+            .listTitle .af{
+                width: 66px;
+                border-right: 2px #505960 solid;
+            }
+            .second div, .finnal div{
+                background-color: transparent !important;
+            }
+            .finnal div{
+                border-bottom: 2px #505960 solid;
+            }
+            .clearfix{
+                clear: both;
+            }
+            .BankCardall .contentbg p{
+                color: #1a3c50;
+                font-size: 16px;
+                margin: 0 auto;
+                font-family: '微軟正黑體';
+                padding-top: 130px;
+            }
+            .BankCardall .contentbg .content .out{
+                position: absolute;
+                bottom: 35px;
+                right: 50px;
+            }
+            .BankCardall .contentbg .bankCard{
+                color: #a940a0;
+                text-align: center;
+                font-family: "微軟正黑體";
+                margin-top: 10px;
+                font-size: 15px;
+                padding-top: 20px;
+            }
+            .BankCardall .contentbg .imptitle{
+                font-size: 16px;
+                color: #1672a7;
+            }
+            .BankCardall .contentbg .precautions{
+                text-align: left;
+                margin-top: 20px;
+                font-size: 12px;
+                color: #2c2e2f;
+                margin-left: 50px;
+                padding-bottom: 30px;
+                font-family: '微軟正黑體';
+                padding-top: 20px;
+            }
+            .BankCardall .contentbg .content .bankSetting{
+                margin-top: 5px;
+            }
+            #selected-text{
+                margin-left: 10px;
+                width: 156px;
+                height: 26px;
+                padding: 0;
+                padding-left: 10px;
+                display: inline-block;
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-image: none;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: .25rem;
+                font-size: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            }
+            .inputGroup .inputButton{
+                width: 26px;
+                height: 26px;
+                position: absolute;
+                right: 0;
+                top: 0px;
+                color: #616161;
+            }
+            .inputGroup a i{
+                margin-top: 6px;
+            }
+            .dropMenu{
+                width: 494px;
+                height: auto;
+                background: #f7f7f7;
+                position: absolute;
+                left: 11px;
+                border: #84909c 1px solid;
+                display: none;
+            }
+            .inputGroup > .active{
+                display: block;
+            }
+            .inputGroup .nav-tabs .nav-link{
+                border-top-left-radius: 0rem;
+                border-top-right-radius: 0rem;
+                background: linear-gradient(to bottom, #c1cbd4 0%,#9ba9b4 100%);
+                border: none;
+                width: 82px;
+                padding-right: 0px;
+                padding-left: 0px;
+                text-decoration: none;
+            }
+            .inputGroup .nav-tabs .nav-item.show .nav-link,.inputGroup .nav-tabs .nav-link.active{
+                color: white;
+                background: linear-gradient(to bottom, #c1cbd4 0%,#9ba9b4 100%);
+                padding-right: 0px;
+                padding-left: 0px;
+                text-decoration: none;
+            }
+            .inputGroup .tab-content{
+                background-image: unset;
+                background-position: unset;
+                background-repeat: unset;
+                background-size: unset;
+            }
+            .inputGroup dt{
+                display: inline-block;
+                padding-left: 3px;
+                color: #a5bac2;
+                line-height: 35px;
+                width: 19px;
+                margin-left: 3px;
+                margin-right: 5px;
+                font-weight: 600;
+                text-align: center;
+            }
+            .inputGroup dd{
+                width: 453px;
+                padding-left: 5px;
+                display: inline-block;
+                text-align: left;
+                margin-top: 7px;
+            }
+            .inputGroup dd a{
+                padding-right: 5px;
+                padding-left: 5px;
+                line-height: 20px;
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 13px;
+                margin-right: 9px;
+                display: inline-block;
+            }

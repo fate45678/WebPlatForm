@@ -1,0 +1,124 @@
+#change1 .contain .info .header { padding-left: 180px; }
+#change1 .contain .info .changeTo { padding-left: 180px;
+                                    padding-top: 20px; }
+#change1 .contain .info .changeMoney { padding-left: 240px; 
+                                       padding-top: 20px; }
+#change1 .contain .info .result { padding-left: 160px; 
+                                  padding-top: 20px; }
+#change1 .contain .info .button { 
+                                  padding-top: 20px; 
+                                  padding-bottom: 20px; }
+#change2 .contain .info .header { padding-left: 180px; }
+#change2 .contain .info .changeTo { padding-left: 180px;
+                                    padding-top: 20px; }
+#change2 .contain .info .result { padding-left: 180px; 
+                                  padding-top: 20px; }
+#change2 .contain .info .button { 
+                                  padding-top: 20px; 
+                                  padding-bottom: 20px; }                                  
+#account1,
+#account2,
+#account3 { width: 150px; }
+
+#txt_Balance1,
+#txt_Balance2,
+#txt_Balance3,
+#txt_Result1,
+#txt_Result2,
+#txt_Result3,
+#txt_BalanceResult1,
+#txt_BalanceResult2,
+#txt_BalanceResult3,
+#txt_BalanceResult4,
+#txt_ChangeMoney,
+#txt_ChangeToWho { border: 0px;
+                background-color: transparent;
+                color: Red;
+                text-align: center;
+                width: 70px; }
+#txt_changeMoney1{
+      border: 1px gray solid;
+}
+#txt_changeMoney1,
+#txt_changeMoney2,
+#txt_Password { text-align: center; }
+#change1 .contain .info .button .btn2 { 
+    line-height: 25px;   
+    width: 170px; height: 25px;
+    font-family: "Microsoft JhengHei";
+    color: White; font-size: 14px;
+    margin: 0 auto;
+    -webkit-border-radius: 3px/4px 4px 3px 3px;
+	-moz-border-radius: 3px/4px 4px 3px 3px;
+	border-radius: 3px/4px 4px 3px 3px;
+	background: #435A8E;
+    background: -moz-linear-gradient(top, #435A8E 0%,#6182A1 100%);
+    background: -webkit-linear-gradient(top, #435A8E 0%,#6182A1 100%);
+    background: linear-gradient(to bottom, #435A8E 0%,#6182A1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#435A8E', endColorstr='#6182A1',GradientType=0 );
+	padding-top: 1px;
+	cursor: pointer;
+	text-align: center;
+}
+#change2 .contain .info .button .btn2 {  
+    line-height: 25px;  
+    width: 170px; height: 25px;
+    margin: 0 auto;
+    font-family: "Microsoft JhengHei";
+    color: White; font-size: 14px;
+    -webkit-border-radius: 3px/4px 4px 3px 3px;
+	-moz-border-radius: 3px/4px 4px 3px 3px;
+	border-radius: 3px/4px 4px 3px 3px;
+	background: #435A8E;
+    background: -moz-linear-gradient(top, #435A8E 0%,#6182A1 100%);
+    background: -webkit-linear-gradient(top, #435A8E 0%,#6182A1 100%);
+    background: linear-gradient(to bottom, #435A8E 0%,#6182A1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#435A8E', endColorstr='#6182A1',GradientType=0 );
+	padding-top: 1px;
+	cursor: pointer;
+	text-align: center;
+}
+#QuotaChangeDone1 .contain .info div { padding-left: 180px;
+                                       padding-top: 20px; }
+#QuotaChangeDone1 .contain .info .header { padding-left: 180px;
+                                           padding-top: 20px;
+                                           padding-bottom: 20px; }
+#QuotaChangeDone2 .contain .info { padding-left: 180px;
+                                       padding-top: 20px; }
+#QuotaChangeDone2 .contain .info .header { padding-left: 0px;
+                                           padding-top: 20px;
+                                           padding-bottom: 20px; }
+#change2 .contain .info .changeTo .input-group{
+    width: 156px;
+    height: 26px;
+}
+#change2 .contain .info .changeTo .input-group .form-control{
+    width: 130px;
+    height: 26px;
+    border: 1px solid #ced4da;
+}
+#change2 .contain .info .changeTo .input-group-btn button{
+    position: absolute;
+    left: -24px;
+    top: 1px;
+    height: 24px;
+    line-height: 25px;
+    padding: 0;
+    width: 24px;
+    box-shadow: none;
+    background: white;
+    border: none;
+    color: black;
+    z-index: 100;
+}
+#change2 .contain .info .changeTo{
+  position: relative;
+}
+#change2 .contain .info .changeTo .input-group{
+    position: absolute;
+    top: 16px;
+    left: 243px;
+}
+#change2 .contain .info .changeTo .dropdown-toggle::after{
+  margin-left: 0px;
+}

@@ -1,0 +1,310 @@
+﻿body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+     height: auto;
+     max-width: 100%;
+ }
+
+.Netspeedall {
+    width:100%;
+    height:100%;
+}
+    .Netspeedall .titlebar {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #84909C;
+    }
+        .Netspeedall .titlebar span {
+            font-size: 28px;
+            color: #FFFFFF;
+        }
+    .Netspeedall .contentbg {
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/allbg.jpg);
+        background-repeat: no-repeat;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Netspeedall .contentbg .content{
+        width: 585px;
+        height: 410px;
+        background-color:#F7F7F7;
+        margin:0 auto;
+        border-radius:0px 0px 5px 5px;
+    }
+    .Netspeedall .contentbg .content .Up{
+        width: 585px;
+        height: 260px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+     .Netspeedall .contentbg .content .Upitems{
+        width: 420px;
+        height: 230px;
+    }
+        .Netspeedall .contentbg .content .Upitems .remind {
+            width: 420px;
+            height: 15px;
+            text-align:left;
+        }
+            .Netspeedall .contentbg .content .Upitems .remind span {
+                text-align: center;
+                font-size: 12px;
+                color: #BD7DCB;
+            }
+        .Netspeedall .contentbg .content .Upitems .bestaddr {
+            width: 420px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+        }
+            .Netspeedall .contentbg .content .Upitems .bestaddr .span1a {
+                display: block;
+                width: 77px;
+                height: 21px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 21px;
+                background-image: url(../images/arrow1.png);
+                background-repeat: no-repeat;
+                background-size: 77px auto;
+                font-size: 12px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddr .span1b {
+                display: block;
+                width: 77px;
+                height: 21px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 21px;
+                background-image: url(../images/arrow2.png);
+                background-repeat: no-repeat;
+                background-size: 77px auto;
+                font-size: 12px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddr .span1c {
+                display: block;
+                width: 77px;
+                height: 21px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 21px;
+                background-image: url(../images/arrow4.png);
+                background-repeat: no-repeat;
+                background-size: 77px auto;
+                font-size: 12px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddr .span1d {
+                display: block;
+                width: 77px;
+                height: 21px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 21px;
+                background-image: url(../images/arrow5.png);
+                background-repeat: no-repeat;
+                background-size: 77px auto;
+                font-size: 12px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddr .spantext {
+                display: block;
+                width: 230px;
+                height: 27px;
+                color: #9A9393;
+                text-align: center;
+                line-height: 25px;
+                font-size: 12px;
+                border-color: #9A9393;
+                border-width: 1px;
+                border-style: solid;
+                margin-left: 20px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddr .spanbtn {
+                display: block;
+                width: 90px;
+                height: 27px;
+                color: #FFFFFF;
+                background-color: #84909C;
+                text-align: center;
+                line-height: 25px;
+                font-size: 12px;
+                border-color: #9A9393;
+                border-width: 1px;
+                border-style: solid;
+                font-family: '微軟正黑體';
+                cursor: pointer;
+            }
+
+        .Netspeedall .contentbg .content .Upitems .span2 {
+            display: block;
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-family: '微軟正黑體';
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+        .Netspeedall .contentbg .content .Upitems .a2 {
+            display: block;
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #43505C;
+            margin:10px auto 0px auto;
+        }
+    .Netspeedall .contentbg .content .Hrbar{
+        width: 560px;
+        height: 10px;
+        margin:0 auto;
+        border-top-width:1px;
+        border-top-style:solid;
+        border-top-color:#84909C;
+    }
+    .Netspeedall .contentbg .content .Down{
+        width: 585px;
+        height: 100px;
+        text-align:center;
+    }
+    .Netspeedall .contentbg .content .Down .items{
+        width: 420px;
+        height: 100px;
+        margin:0 auto;
+    }
+        .Netspeedall .contentbg .content .Down .items .remind2 {
+            width: 420px;
+            height: 15px;
+            text-align: left;
+        }
+            .Netspeedall .contentbg .content .Down .items .remind2 span {
+                text-align: center;
+                font-size: 12px;
+                color: #BD7DCB;
+            }
+        .Netspeedall .contentbg .content .Down .items .remindlist {
+            width: 420px;
+            height: 85px;
+            text-align: justify;
+        }
+            .Netspeedall .contentbg .content .Down .items .remindlist .span1 {
+                text-align: left;
+                font-size: 12px;
+                color: #000000;
+            }
+            .Netspeedall .contentbg .content .Down .items .remindlist .span2 {
+                text-align: left;
+                font-size: 12px;
+                color: #BD7DCB;
+            }
+        .Netspeedall .contentbg .content .Upitems .bestaddrMobile {
+            width: 420px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            display: none;
+        }
+            .Netspeedall .contentbg .content .Upitems .bestaddrMobile .span1a {
+                display: block;
+                width: 77px;
+                height: 21px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 21px;
+                background-image: url(../images/arrow1.png);
+                background-repeat: no-repeat;
+                background-size: 77px auto;
+                font-size: 12px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddrMobile .span1b {
+                display: block;
+                width: 77px;
+                height: 21px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 21px;
+                background-image: url(../images/arrow2.png);
+                background-repeat: no-repeat;
+                background-size: 77px auto;
+                font-size: 12px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddrMobile .span1c {
+                display: block;
+                width: 77px;
+                height: 21px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 21px;
+                background-image: url(../images/arrow4.png);
+                background-repeat: no-repeat;
+                background-size: 77px auto;
+                font-size: 12px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddrMobile .span1d {
+                display: block;
+                width: 77px;
+                height: 21px;
+                color: #FFFFFF;
+                text-align: center;
+                line-height: 21px;
+                background-image: url(../images/arrow5.png);
+                background-repeat: no-repeat;
+                background-size: 77px auto;
+                font-size: 12px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddrMobile .spantext {
+                display: block;
+                width: 230px;
+                height: 27px;
+                color: #9A9393;
+                text-align: center;
+                line-height: 25px;
+                font-size: 12px;
+                border-color: #9A9393;
+                border-width: 1px;
+                border-style: solid;
+                margin-left: 20px;
+                font-family: '微軟正黑體';
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddrMobile .spanbtn {
+                display: block;
+                width: 90px;
+                height: 27px;
+                color: #FFFFFF;
+                background-color: #84909C;
+                text-align: center;
+                line-height: 25px;
+                font-size: 12px;
+                border-color: #9A9393;
+                border-width: 1px;
+                border-style: solid;
+                font-family: '微軟正黑體';
+                cursor: pointer;
+            }
+            @media only screen and (max-width: 768px) {
+            .Netspeedall .contentbg .content .Upitems .bestaddrMobile{
+                display: flex;
+            }
+            .Netspeedall .contentbg .content .Upitems .bestaddr{
+                display: none;
+            }
+            }
+

@@ -1,0 +1,357 @@
+.wrap{
+	min-width: 1200px;
+	max-width: 1200px;
+}
+body{
+    background-image: url(../images/allbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	overflow-x: hidden;
+}
+.contain{
+	background-color: #f7f7f7;
+	width: 95%;
+}
+.tab-content{
+	height: 690px;
+	padding-bottom: 25px;
+}
+.title .nav-tabs{
+	margin-left: 30px;
+}
+#everdayCompare .tableSetting th, #everyWeekCompare .tableSetting th, #everyYearCompare .tableSetting th{
+	border: none;
+	text-align: center;
+}
+#everdayCompare .tableSetting td, #everyWeekCompare .tableSetting td, #everyYearCompare .tableSetting td{
+	border: none;
+	text-align: center;
+}
+#everdayCompare .tableSetting .odd, #everyWeekCompare .tableSetting .odd, #everyYearCompare .tableSetting .odd{
+	background-color: #F7F7F7;
+    color: #5c8295;
+}
+#everdayCompare .tableSetting .even, #everyWeekCompare .tableSetting .even, #everyYearCompare .tableSetting .even{
+	color: #5c8295;
+    background-color: #d7eded;
+}
+#developAnalysis .middleBlock .tableSetting th, #developAnalysis .middleBlock .tableSetting td{
+	text-align: center;
+	border: none;
+}
+#developAnalysis .middleBlock{
+	margin-top: 30px !important;
+}
+#developAnalysis .middleBlock .tableSetting .odd{
+	background-color: #F7F7F7;
+    color: #5c8295;
+}
+#developAnalysis .middleBlock .tableSetting .even{
+	color: #5c8295;
+    background-color: #d7eded;
+}
+#riskMange .contain, #ticketTotal .contain, #BettingAnalysis .contain{
+    text-align: left;
+    width: 95%;
+    height:auto;
+}
+#riskMange .contain .datePick, #ticketTotal .contain .datePick, #BettingAnalysis .contain .datePick{
+    display: inline-block;
+    margin-top: 22px;
+    position: relative;
+}
+#riskMange .contain .firstDatePick, #ticketTotal .contain .firstDatePick, #BettingAnalysis .contain .firstDatePick{
+    margin-left: 32px;
+}
+#riskMange .contain input, #ticketTotal .contain input, #BettingAnalysis .contain input{
+    width: 156px;
+    height: 26px;
+    display: inline-block;
+    border: 1px solid #ced4da;
+}
+#riskMange .contain .dateSpanSetting, #ticketTotal .contain .dateSpanSetting, #BettingAnalysis .contain .dateSpanSetting{
+    vertical-align: text-bottom;
+    background-color: #F7F7F7;
+    color: rgb(132, 144, 156);
+}
+#riskMange .contain .dateSpanSettingII, #ticketTotal .contain .dateSpanSettingII, #BettingAnalysis .contain .dateSpanSettingII{
+    margin-left: 35px;
+}
+#riskMange .contain .userAcc, #ticketTotal .contain .userAcc, #BettingAnalysis .contain .userAcc{
+    display: inline-block;
+    margin-left: 270px;
+}
+#riskMange .dateFilter, #ticketTotal .dateFilter, #BettingAnalysis .dateFilter{
+    margin-left: 95px;
+    margin-top: 10px;
+}
+#riskMange .dateFilter .dateBtn, #ticketTotal .dateFilter .dateBtn, #BettingAnalysis .dateFilter .dateBtn{
+    float: left;
+}
+#riskMange .dateFilter .dateBtn a, #ticketTotal .dateFilter .dateBtn a, #BettingAnalysis .dateFilter .dateBtn a{
+    font-family: "Microsoft JhengHei";
+    display: block;
+    font-size: 15px;
+    padding: 2px 20px;
+    color: white;
+    -webkit-border-radius: 3px/4px 4px 3px 3px;
+    -moz-border-radius: 3px/4px 4px 3px 3px;
+    border-radius: 3px/4px 4px 3px 3px;
+    background-color: #a0a0a0;
+}
+#riskMange .dateFilter .dateBtn .active, #riskMange .contain .active, #ticketTotal .dateFilter .dateBtn .active, #ticketTotal .contain .active, #BettingAnalysis .dateFilter .dateBtn .active, #BettingAnalysis .contain .active{
+    background: #90425a;
+    background: -moz-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+    background: -webkit-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+    background: linear-gradient(to bottom, #90425a 0%, #bf698e 100%);
+    }
+#riskMange .contain .lotteryClass, #ticketTotal .contain .lotteryClass, #BettingAnalysis .contain .lotteryClass{
+    margin-left: 103px;
+    font-family: "Microsoft JhengHei";
+    font-size: 14px;
+    padding: 3px 21px;
+    background-color: #a0a0a0;
+    border-radius: 3px/4px 4px 3px 3px;
+    color: white;
+    margin-top: 10px;
+    display: inline-block;
+}
+#riskMange .contain .lotteryClassII, #ticketTotal .contain .lotteryClassII, #BettingAnalysis .contain .lotteryClassII{
+    margin-left: 12px;
+    padding: 3px 25px;
+}
+#riskMange .contain .lookfor, #ticketTotal .contain .lookfor, #BettingAnalysis .contain .lookfor{
+    margin-left: 45px;
+    background: #90425a;
+    background: -moz-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+    background: -webkit-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+    background: linear-gradient(to bottom, #90425a 0%, #bf698e 100%);
+}
+#BettingAnalysis .contain .lookfor{
+    margin-left: 400px;
+}
+#riskMange .contain .changeReport, #ticketTotal .contain .changeReport, #BettingAnalysis .contain .changeReport{
+    margin-left: 310px;
+    background: #465d8f;
+    background: -moz-linear-gradient(bottom, #465d8f 0%, #6081a2 100%);
+    background: -webkit-linear-gradient(bottom, #465d8f 0%, #6081a2 100%);
+    background: linear-gradient(to bottom, #465d8f 0%, #6081a2 100%);
+}
+#riskMange .LotteryType, #ticketTotal .LotteryType, #BettingAnalysis .LotteryType{
+    display: inline-block;
+    font-size: 15px;
+    font-family: "Microsoft JhengHei";
+    margin-top: 10px;
+    margin-left: 200px;
+    background-color: #F7F7F7;
+    color: rgb(132, 144, 156);
+    margin-right: 10px;
+}
+#riskMange .LotteryType input, #ticketTotal .LotteryType input, #BettingAnalysis .LotteryType input{
+    padding: 2px;
+}
+#riskMange .LotteryNumber, #ticketTotal .LotteryNumber, #BettingAnalysis .LotteryNumber{
+    border: 1px gray solid;
+    padding-left: 7px;
+}
+#riskMange th, #ticketTotal th, #BettingAnalysis th, #ghostMange th, .ticketTotal th{
+	background-color: rgb(163, 182, 201);
+    color: white;
+    font-family: 微軟正黑體;
+    font-size: 13px;
+    text-align: center;
+    padding: 3px 0;
+}
+#riskMange td, #ticketTotal td, #BettingAnalysis td, #ghostMange td, .ticketTotal td{
+	text-align: center;
+    color: rgb(132, 144, 156);
+    font-family: 微軟正黑體;
+    font-size: 13px;
+    padding: 3px 0;
+}
+#riskMange .middleBlock, #ticketTotal .middleBlock, #BettingAnalysis .middleBlock{
+	margin-top: 30px !important;
+}
+#riskMange .middleBlock .tableSetting .odd, #ticketTotal .middleBlock .tableSetting .odd, #BettingAnalysis .middleBlock .tableSetting .odd{
+	background-color: #F7F7F7;
+    color: #5c8295;
+}
+#riskMange .middleBlock .tableSetting .even, #ticketTotal .middleBlock .tableSetting .even, #BettingAnalysis .middleBlock .tableSetting .even, #ghostMange .tableSetting .even, .ticketTotal .tableSetting .even{
+	color: #5c8295;
+    background-color: #d7eded;
+}
+#developAnalysis .middleBlock .topTriangle{
+    top: 15px;
+}
+#developAnalysis .middleBlock .bottomTriangle{
+    top: 24px;
+}
+#Timer{
+    position: absolute;
+    top: 66px;
+    right: 28px;
+    color: white;
+}
+#BettingAnalysis .firstDatePick{
+    margin-top: 10px !important;
+}
+#BettingAnalysis .dateFilter{
+    margin-left: 98px;
+}
+#BettingAnalysis .contain .dataKeep{
+    vertical-align: super;
+}
+#developAnalysis .developAnalysisMenu{
+    border-bottom: none;
+}
+#developAnalysis .developAnalysisMenu li{
+    float: left;
+}
+#developAnalysis .developAnalysisMenu li a{
+    border: 1px #a3b6c9 solid !important;
+    background-color: transparent;
+    padding: 3px 25px;
+    font-family: "Microsoft JhengHei";
+    font-size: 14px;
+    border-radius: 3px/4px 4px 3px 3px;
+    color: black;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 20px;
+}
+#developAnalysis .developAnalysisMenu li .active{
+    background-color: #43505C;
+    color: white;
+}
+#ticketTotal .finnalTable{
+    height: 24px;
+    background-color: #a3b6c9;
+    padding-right: 16px;
+}
+#ticketTotal .finnalTable .t1{
+    width: 156px;
+    height: 23px;
+    line-height: 24px;
+    float: left;
+    color: white;
+    font-family: "Microsoft JhengHei";
+    font-size: 13px;
+    text-align: center;
+}
+.ticketTotal .containWrap{
+    height: 375px;
+    width: 800px;
+    background-image: url(../images/allbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ticketTotal .contain{
+    text-align: left;
+    width: 95%;
+    background-color: #F7F7F7;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    padding-bottom: 10px;
+    height: 90px;
+}
+.ticketTotal .contain{
+    height: 350px;
+}
+.ticketTotal .modal-content{
+    width: 800px;
+    margin: 0 auto;
+    top: 180px;
+    box-shadow: 19px 15px 10px -10px #696969;
+}
+.ticketTotal .wrap .title{
+    height: 40px;
+    line-height: 40px;
+    width: 800px;
+}
+.ticketTotal .title span{
+    padding-top: 0;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.ticketTotal .contain p{
+    text-align: center;
+    font-family: "Microsoft JhengHei";
+    color: #84909C;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+ .ticketTotal .contain .confirm{
+    display: inline-block;
+    padding: 5px 25px;
+    color: white;
+    margin-top: 16px;
+    background: #465d8f;
+    border-radius: 3px/4px 4px 3px 3px;
+    background: -moz-linear-gradient(bottom, #465d8f 0%, #6081a2 100%);
+    background: -webkit-linear-gradient(bottom, #465d8f 0%, #6081a2 100%);
+    background: linear-gradient(to bottom, #465d8f 0%, #6081a2 100%);
+    transition: 0.3s;
+ }
+.ticketTotal .contain .cancel{
+    display: inline-block;
+    padding: 5px 25px;
+    color: white;
+    margin-top: 16px;
+    border-radius: 3px/4px 4px 3px 3px;
+    background: #90425a;
+    background: -moz-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+    background: -webkit-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+    background: linear-gradient(to bottom, #90425a 0%, #bf698e 100%);
+    transition: 0.3s;
+}
+#ticketTotal .contain{
+    padding-bottom: 0px;
+}
+.ticketTotal .wrap{
+    min-width: 800px;
+}
+#developAnalysis .input-group {
+    width: 156px;
+    height: 26px;
+    display: inline-block;
+    margin-right: 500px;
+    position: absolute;
+}
+#developAnalysis .input-group .form-control {
+    width: 156px;
+    height: 26px;
+    border: 1px solid #ced4da;
+}
+#developAnalysis .input-group-btn button{
+    position: absolute;
+    right: 1px;
+    top: -25px;
+    height: 24px;
+    line-height: 25px;
+    padding: 0;
+    width: 24px;
+    box-shadow: none;
+    background: white;
+    border: none;
+    color: black;
+    z-index: 100;
+}
+#developAnalysis .SearchBtn{
+    position: absolute;
+    top: 65px;
+    left: 500px;
+    vertical-align: top;
+}
+#developAnalysis .teamDetail{
+    position: relative;
+}

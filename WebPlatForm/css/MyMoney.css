@@ -1,0 +1,135 @@
+﻿body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MyMoney {
+    width: 800px;
+    height: 490px;
+}
+    .MyMoney .titlebar {
+        width: 800px;
+        height: 95px;
+        display: flex;
+        align-items: center;
+        background-color: #84909C;
+    }
+        .MyMoney .titlebar span {
+            font-size: 28px;
+            color: #FFFFFF;
+            margin-left: 70px;
+            font-family: '微軟正黑體';
+        }
+    .MyMoney .contentbg {
+        width: 800px;
+        height: 395px;
+        background-image: url(../images/allbg.jpg);
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+        .MyMoney .contentbg .content {
+            width: 730px;
+            height: 370px;
+            background-color: #F7F7F7;
+            margin: 0 auto;
+            border-radius:0px 0px 5px 5px;
+            text-align:center;
+        }
+            .MyMoney .contentbg .content .Up {
+                width: 650px;
+                height: 240px;
+                margin: 0 auto;
+            }
+                .MyMoney .contentbg .content .Up .items {
+                    width: 650px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                }
+                    .MyMoney .contentbg .content .Up .items .span1 {
+                        color: #1a3c50;
+                        font-size: 18px;
+                        font-family: '微軟正黑體';
+                    }
+                    .MyMoney .contentbg .content .Up .items .span2 {
+                        color: #1a3c50;
+                        font-size: 14px;
+                        margin-left: 50px;
+                        font-family: '微軟正黑體';
+                    }
+                    .MyMoney .contentbg .content .Up .items .span3 {
+                        color: #da1a39;
+                        font-size: 12px;
+                        margin-left: 5px;
+                        font-family: '微軟正黑體';
+                    }
+                    .MyMoney .contentbg .content .Up .items .textbox1 {
+                        font-family: '微軟正黑體';
+                        margin-left: 50px;
+                    }
+                    .MyMoney .contentbg .content .Up .items select {
+                        margin-left: 50px;
+                    }
+                    .MyMoney .contentbg .content .Up .items .spanbtn {
+                        display: block;
+                        width: 170px;
+                        height: 25px;
+                        line-height: 25px;
+                        text-align: center;
+                        font-family: '微軟正黑體';
+                        font-size: 14px;
+                        color: #FFFFFF;
+                    }
+                    .MyMoney .contentbg .content .Up .items .abtn {
+                        display: block;
+                        width: 170px;
+                        height: 25px;
+                        border-radius: 5px;
+                        background-color: #43505C;
+                         margin-left: 122px;
+                         margin-bottom:10px;
+                    }
+            .MyMoney .contentbg .content .Hrbar {
+                width: 650px;
+                height: 10px;
+                margin: 0 auto;
+                border-top-width: 1px;
+                border-top-style: solid;
+                border-top-color: #84909C;
+            }
+            .MyMoney .contentbg .content .Down {
+                width: 650px;
+                height: 100px;
+                margin: 0 auto;
+            }
+                .MyMoney .contentbg .content .Down .items {
+                    width: 650px;
+                    height: 100px;
+                    margin: 0 auto;
+                }
+                    .MyMoney .contentbg .content .Down .items .remind2 {
+                        width: 650px;
+                        height: 20px;
+                        text-align: left;
+                    }
+                        .MyMoney .contentbg .content .Down .items .remind2 span {
+                            text-align: center;
+                            font-size: 16px;
+                            color: #1672a7;
+                        }
+                    .MyMoney .contentbg .content .Down .items .remindlist {
+                        width: 650px;
+                        height: 85px;
+                        text-align: justify;
+                        margin-top:5px;
+                    }
+                        .MyMoney .contentbg .content .Down .items .remindlist .span1 {
+                            text-align: left;
+                            font-size: 12px;
+                            color: #1a3c50;
+                        }
+                        .MyMoney .contentbg .content .Down .items .remindlist .span2 {
+                            text-align: left;
+                            font-size: 12px;
+                            color: #BD7DCB;
+                        }

@@ -1,0 +1,351 @@
+.wrap{
+    min-width: 1440px;
+    margin: 0 auto;
+    width: 1440px;
+}
+.wrap .header{
+    height: 57px;
+    background: #496a97;
+    background: -moz-linear-gradient(left, #496a97 0%, #66a1c0 100%);
+    background: -webkit-linear-gradient(left, #496a97 0%,#66a1c0 100%);
+    background: linear-gradient(to right, #496a97 0%,#66a1c0 100%);
+    text-align: left;
+}
+.wrap .header img{
+    margin-top: 6px;
+    margin-left: 15px;
+    vertical-align: baseline;
+}
+.wrap .header .logoText{
+    display: inline-block;
+    font-family: "Microsoft JhengHei";
+    font-size: 40px;
+    color: white;
+    font-weight: lighter;
+    vertical-align: bottom;
+    margin-left: 10px;
+}
+.wrap .topBettingMenu{
+    height: 110px;
+}
+.wrap .topBettingMenu .dateStart, .wrap .topBettingMenu .dateEnd{
+    width: 156px;
+    height: 26px;
+    display: inline-block;
+}
+.wrap .topBettingMenu .HightestBettingMenu{
+    background-color: white;
+}
+.wrap .topBettingMenu .HightestBettingMenu hr{
+    height: 1px;
+    width: 1440px;
+    margin: 0;
+}
+.wrap .topBettingMenu .nav-link{
+    background-color: transparent;
+    color: #1a3c50;
+    font-size: 15px;
+    font-family: "Microsoft JhengHei";
+    padding: 5px;
+    border-radius: 0rem;
+}
+.wrap .topBettingMenu .nav-link.active{
+    background-color: #5090d6;
+    color: white;
+}
+.wrap .topBettingMenu .titleLi{
+    width: 60px;
+    margin-right: 5px;
+}
+.wrap .topBettingMenu .titleA{
+    color: #1d6da2;
+    border-right: 1px solid black;
+    padding: 0 5px;
+    margin: 5px 0;
+}
+.wrap .topBettingMenu .finnalLi{
+    border-right: none;
+}
+.wrap .topBettingMenu .tab-content{
+    background-color: #a6a6a6;
+    background-image: unset;
+    background-position: unset;
+    background-repeat: unset;
+    background-size: unset;
+    height: auto;
+}
+.wrap .BettingList{
+    height: 50px;
+    margin-left: 150px;
+}
+.wrap .BettingList .nav-link{
+    border-right: none;
+    margin: 0px;
+    padding: 10px 15px;
+}
+.wrap .topBettingMenu .BettingBlcok{
+    height: auto;
+    background-color: #f7f7f7;
+}
+.wrap .BettingList .nav-link.active {
+    background-color: white;
+    color: black;
+}
+.wrap .topBettingMenu .supporyBtn{
+    height: 50px;
+    background-color: #d9d9d9;
+    text-align: left;
+}
+.wrap .topBettingMenu .SupportBtnMenu {
+    padding-left: 40px;
+    display: inline-block;
+}
+.wrap .topBettingMenu .SupportBtnMenu li{
+    float: left;
+    padding: 10px 5px;
+    border: 1px solid #a5a5a5;
+    width: 86px;
+    margin: 0 11px;
+    margin-top: 4px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+.wrap .topBettingMenu .SupportBtnMenu li input{
+    margin-right: 10px;
+    -webkit-appearance: checkbox;
+}
+.wrap .topBettingMenu .dateSelect{
+    vertical-align: top;
+}
+.wrap .topBettingMenu .dateSelect li{
+    padding: 5px;
+    text-align: center;
+    margin-top: 9px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.wrap .topBettingMenu .dateSelect .active{
+    border: 1px solid #a5a5a5;
+    background-color: #f7f7f7;
+}
+.wrap .topBettingMenu .datePickerBlock{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 11px;
+    padding-left: 92px;
+}
+.wrap .topBettingMenu .datePickerBlock input{
+    border: #d9d9d9 solid 1px;
+    padding-left: 5px;
+}
+.wrap .topBettingMenu .datePickerBlock .SearchBtn{
+    display: inline-block;
+    padding: 3px 20px;
+    background-color: #00b251;
+    color: white;
+    margin-left: 25px;
+}
+.chart-table .title-text th {
+    font-weight: 700;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+.chart-table th {
+    padding: 5px 0;
+    background-color: #515368;
+    text-align: center;
+    color: #FFF;
+}
+.chart-table .td-bg {
+    background: #3A3B50;
+}
+.chart-table .border-right {
+    border-right: 1px solid rgba(155, 155, 155, 0.28);
+}
+.chart-table .border-bottom {
+    border-bottom: 1px solid #757575;
+}
+.chart-table .title-number th {
+    padding-top: 10px;
+}
+.chart-table .title-text .border-bottom-header, .chart-table .title-number .border-bottom-header, .chart-table thead .border-bottom, #J-ball-content .border-bottom, .title-text .border-bottom, .tbody-footer-header .border-bottom, .J-ball-content border-bottom, .tbody-footer-header border-bottom, #J-select-content .border-bottom{
+    border-bottom: 1px solid #757575;
+}
+.chart-table .tbody {
+    color: #5B5D74;
+}
+.chart-table .ball-none, .chart-table .title-number .ball-none {
+    width: 4px;
+}
+.auxiliary-area td {
+    background-color: #515368;
+    border-top: 1px solid #E6E6E6;
+    color: #FFF;
+}
+.chart-table td {
+    padding: 10px 0;
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #fff;
+    background-color: #FFF;
+    text-align: center;
+}
+.auxiliary-area td {
+    background-color: #515368;
+    border-top: 1px solid #E6E6E6;
+    color: #FFF;
+    font-size: 12px;
+}
+.ball-noraml {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-style: normal;
+    color: #666;
+    overflow: hidden;
+}
+.auxiliary-area td .ball-noraml {
+    color: #FFF;
+}
+.chart-table th .ball-noraml {
+    color: #FFF;
+}
+.c-0-1, .c-0-2, .c-0-3 {
+    background-image: url(un-chart.png);
+    background-repeat: no-repeat;
+    color: #FFF;
+    background: #FD4E5A;
+    border-radius: 20px;
+}
+.c-0-1, .c-0-2, .c-0-3 {
+    background-position: 0 0;
+}
+.f-1, .f-2, .f-3, .f-4, .f-5 {
+    background-image: url(un-chart.png);
+    background-repeat: no-repeat;
+    color: #fff;
+    background: #34BC0F;
+    border-radius: 20px;
+}
+.f-1 {
+    background-position: -60px 0;
+}
+.f-2, .f-3, .f-4, .f-5 {
+    background-position: -80px 0;
+    background: #BD3ED4;
+}
+.chart-table .lottery-numbers {
+    color: #F26432;
+}
+.chart-table .tbody .bg-blue {
+    background-color: #00A2FF;
+    color: #FFF;
+}
+.chart-table .tbody .bg-green {
+    background-color: #34BC0F;
+    color: #FFF;
+}
+.chart-table .tbody .bg-red {
+    background-color: #F53F00;
+    color: #FFF;
+}
+.chart-table .group-current {
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    font-style: normal;
+    background-position: -100px 0;
+}
+.chart-table .tbody .bg-blue .ball-noraml {
+    color: #FFF;
+}
+.LineI{
+    width: 114px;
+    height: 2px;
+    position: absolute;
+    top: 44px;
+    right: 14px;
+    transform: rotate(-19deg);
+    background: #FD4E5A;
+    z-index: 10;
+}
+.LineII{
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    top: 40px;
+    left: -4px;
+    transform: rotate(90deg);
+    background: #FD4E5A;
+}
+.LineIII{
+    width: 105px;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    right: 9px;
+    transform: rotate(-21deg);
+    background: #FD4E5A;
+}
+.LineIIII{
+    width: 105px;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    right: 9px;
+    transform: rotate(-21deg);
+    background: #FD4E5A;
+}
+.LineV{
+    left: 13px;
+    width: 185px;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    transform: rotate(14deg);
+    background: #FD4E5A;
+}
+.LineVI{
+    width: 163px;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    right: 9px;
+    transform: rotate(-14deg);
+    background: #FD4E5A;
+}
+.LineVII{
+    left: 13px;
+    width: 162px;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    transform: rotate(14deg);
+    background: #FD4E5A;
+}
+.LineVIII{
+    right: 13px;
+    width: 162px;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    transform: rotate(-14deg);
+    background: #FD4E5A;
+}
+.LineVIIII{
+    left: 13px;
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    transform: rotate(21deg);
+    background: #FD4E5A;
+}
+.chart-table .title-number th input{
+    -webkit-appearance: checkbox;
+}

@@ -1,0 +1,372 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    font-family:"微軟正黑體";
+    -webkit-font-smoothing: antialiased; 
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    background-image: url(../images/allbg.jpg);
+    background-repeat: no-repeat;
+    background-size:200% 200%; 
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+EraserDust.ttf html{
+    height: 100%;
+}
+
+body {
+    background-image: url(../images/allbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "微軟正黑體","Microsoft YaHei", Helvetica, Arial,"Microsoft JhengHei", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI";
+}
+img{
+    border: none;
+}
+
+textarea{
+    overflow: auto;
+    resize: none;
+}
+
+a:focus,
+a:hover,
+a:active{
+    text-decoration: none;
+    outline: none;
+    transition: .3s;
+    behavior: expression(this.onFocus=this.blur());
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover{
+    outline: 0px !important;
+    -webkit-appearance: none;
+}
+
+button:focus{
+    outline: 0px !important;
+    -webkit-appearance: none;
+}
+
+.clearfix:before,
+.clearfix:after{
+    display: table;
+    content: "";
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+.clearfix{
+    *zoom: 1;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.tc{
+    text-align: center;
+}
+.ht36 {
+    height: 25px;
+}
+.tl{
+    text-align: left;
+}
+
+.tr{
+    text-align: right;
+}
+
+.inflex{
+    display: inline-flex;
+}
+.inblock{
+    display: inline-block;
+}
+.abs{
+    position: absolute;
+}
+
+.rel{
+    position: relative;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+.fz12{
+	font-size: 12px;
+}
+.fz13{
+	font-size: 13px;
+}
+.fz14{
+	font-size: 14px;
+}
+.fz15{
+    font-size: 15px;
+}
+.fz16{
+    font-size: 16px;
+}
+.fz17{
+    font-size: 17px;
+}
+.fz18{
+	font-size: 18px;
+}
+.fz19{
+	font-size: 19px;
+}
+.fz24{
+	font-size: 24px;
+}
+.fz20{
+	font-size: 20px;
+}
+b{
+    font-weight: bold;
+}
+.black {
+    background-color: black !important;
+}
+
+.padding-none {
+    padding: 0 !important;
+}
+.vcenter {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    float: none !important;
+}
+.margintop17 {
+    margin-top:17px;
+}
+.Trendall {
+    background-image: url(../images/allbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+.TrendDivTop {
+    width: 95%;
+    height: 25%;
+    margin: 0px auto;
+}
+    .TrendDivTop .titlebar {
+        width: 95%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        background-color: #84909C;
+        border-radius:5px 5px 0px 0px;
+    }
+        .TrendDivTop .titlebar .verticalcenter {
+            width: 95%;
+            height: auto;
+            text-align: center;
+        }
+        .TrendDivTop .titlebar img {
+            width: 188px;
+            height: auto;
+            margin:0px auto;
+        }
+    .TrendDivTop .content {
+        width: 95%;
+        height: 65%;
+        background-color: #F7F7F7;
+        position: relative;
+    }
+        .TrendDivTop .content .itemslist {
+            width: 95%;
+            height: 20%;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+            .TrendDivTop .content .itemslist span {
+                color: #54667F;
+                cursor: pointer;
+            }
+            .TrendDivTop .content .itemslist .textbox1 {
+                width: 300px;
+                height: 30px;
+                color: #9A9393;
+                font-size: 14px;
+                border-color: #9A9393;
+                border-width: 1px;
+                border-style: solid;
+                font-family: '微軟正黑體';
+            }
+            .TrendDivTop .content .itemslist .textbox2 {
+                width: 300px;
+                height: 30px;
+                color: #9A9393;
+                font-size: 14px;
+                margin-top: 4px;
+                border-color: #9A9393;
+                border-width: 1px;
+                border-style: solid;
+                font-family: '微軟正黑體';
+            }
+            .TrendDivTop .content .itemslist .textbox3 {
+                width: 170px;
+                height: 25px;
+                color: #9A9393;
+                font-size: 14px;
+                border-width: 0;
+                border-style: none;
+                font-family: '微軟正黑體';
+            }
+            .TrendDivTop .content .itemslist .borderstyle {
+                width: 300px;
+                height: 30px;
+                border-color: #9A9393;
+                border-width: 1px;
+                border-style: solid;
+                display: flex;
+                align-items: center;
+                margin-top: 4px;
+            }
+            .TrendDivTop .content .itemslist .borderstyle img{
+                width: 55px;
+                height: auto;
+            }
+                .TrendDivTop .content .itemslist .borderstyle span {
+                    color: #7F7B7B;
+                    font-size: 14px;
+                    margin-left:15px;
+                }
+                .TrendDivTop .content .itemslist .btn1 {
+                    color: #FFFFFF;
+                    font-size: 14px;
+                    margin-top:10px;
+                    background-color:#43505C;
+                    border-radius:2px;
+                }
+            .TrendDivTop .content .itemslist .span2 {
+                display: block;
+                width: 300px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                font-family: '微軟正黑體';
+                font-size: 14px;
+                color: #FFFFFF;
+            }
+            .TrendDivTop .content .itemslist .a2 {
+                display: block;
+                width: 300px;
+                height: 30px;
+                border-radius: 5px;
+                background-color: #43505C;
+                margin-top: 10px;
+                margin-bottom:10px;
+            }
+
+            .TrendDivTop .titlebar .titleSpan{
+                    width: 600px;
+                    font-size: 28px;
+                    letter-spacing: 9.5px;
+                    color: white;
+                    height: auto;
+                    text-align: center;
+            }
+            .TrendDivTop .content .tipsInfo{
+                font-size: 18px;
+                font-family: "微軟正黑體";
+                padding: 50px 20px 0px 20px;
+                text-align: left;
+            }
+            input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{
+    opacity: 0;
+}
+.gameList .nav-link{
+    background-color: transparent;
+    display: inline-block;
+    width: 95%;
+    height: 20%;
+    line-height: 25px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0px;
+}
+.gameList .nav-link.disabled{
+    color: #868e96;
+    opacity: 0 !important;
+    cursor: default;
+}
+.col2{
+    width:40%;
+    display:inline-block;
+}

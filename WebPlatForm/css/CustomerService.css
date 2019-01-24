@@ -1,0 +1,661 @@
+.Cuswrap{
+	width: 658px;
+	min-width: 658px;
+	margin: 0 auto;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Cuswrap .leftBlock{
+	float: left;
+	width: 54px;
+	height: 602px;
+	-webkit-border-radius: 0 1px 0 0/0 602px 0 0;
+	-moz-border-radius: 0 1px 0 0/0 602px 0 0;
+	border-radius: 0 1px 0 0/0 602px 0 0;
+	background-color: #566779;
+}
+.Cuswrap .leftBlock .leftList{
+	padding-left: 0;
+    list-style: none;
+    padding-top: 50px;
+}
+.Cuswrap .middleBlock{
+	float: left;
+	width: 194px;
+	height: 602px;
+	-webkit-border-radius: 0 0 0 1px/0 0 0 35px;
+	-moz-border-radius: 0 0 0 1px/0 0 0 35px;
+	border-radius: 0 0 0 1px/0 0 0 35px;
+	background-color: #f7f7f7;
+}
+.Cuswrap .middleBlock .CusUserBlock{
+	background-color: #84909c;
+	vertical-align: top;
+	 text-align: center;
+    line-height: 35px;
+}
+.Cuswrap .middleBlock .CusListBlock{
+	background-color: #dfeaeb;
+	vertical-align: top;
+	text-align: left;
+    line-height: 42px;
+    height: 42px;
+    position: relative;
+
+}
+.Cuswrap .middleBlock .CusUserBlock .CusUserId, .Cuswrap .rightBlock .chatTitle .CusUserId{
+	font-family: "Microsoft JhengHei";
+    font-size: 17px;
+    color: white;
+    letter-spacing: 13px;
+}
+.Cuswrap .middleBlock .CusListBlock .CusUserId{
+	font-family: "Microsoft JhengHei";
+    font-size: 15px;
+    color: #84909c;
+    padding-left: 20px;
+}
+.Cuswrap .middleBlock .CusListBlock.odd{
+	background-color: #f7f7f7;
+}
+.Cuswrap .middleBlock .CusListBlock.even{
+	background-color: #e2eaec;
+}
+.Cuswrap .middleBlock .CusListBlock.active{
+	background-color: #d0edf3;
+}
+.Cuswrap .middleBlock .ListBlock{
+	overflow-y: scroll;
+	height: 567px;
+}
+.Cuswrap .middleBlock .CusListBlock .CusDelBtn{
+	position: absolute;
+    right: 8px;
+    top: 16px;
+    width: 5%;
+    cursor: pointer;
+}
+.Cuswrap .rightBlock{
+	float: left;
+	width: 408px;
+	height: 602px;
+	-webkit-border-radius: 0 0 0 1px/0 0 0 35px;
+	-moz-border-radius: 0 0 0 1px/0 0 0 35px;
+	border-radius: 0 0 0 1px/0 0 0 35px;
+	background-color: #dfeaeb;
+}
+.Cuswrap .rightBlock .chatTitle{
+	background-color: #84909c;
+	vertical-align: top;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    width: 100%;
+}
+.Cuswrap .rightBlock .chatBlock{
+	width: 100%;
+	height: 410px;
+	-webkit-border-radius: 0 0 9px 9px/0 0 8px 8px;
+	-moz-border-radius: 0 0 9px 9px/0 0 8px 8px;
+	border-radius: 0 0 9px 9px/0 0 8px 8px;
+	background-color: #f7f7f7;
+	overflow-y: scroll;
+	position: relative;
+}
+.Cuswrap .rightBlock .chatBlock .otherBox, .Cuswrap .rightBlock .chatBlock .MyBox{
+	width: 278px;
+	height: auto;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #dcdcdc;
+	 display: inline-block;
+    margin-top: 82px;
+    margin-left: 25px;
+    padding: 10px 0;
+}
+.Cuswrap .rightBlock .chatBlock .MyBox{
+	margin-left: 90px;
+	margin-top: 50px;
+	background-color: #bef1f5;
+
+}
+.Cuswrap .rightBlock .chatBlock .otherBox .BoxUser, .Cuswrap .rightBlock .chatBlock .MyBox .BoxUser{
+	font-weight: bold;
+	color: #04213d;
+	font-size: 16px;
+	font-family: "Microsoft JhengHei";
+	margin: 0 0 0 10px;
+}
+.Cuswrap .rightBlock .chatBlock .MyBox .BoxUser{
+	color: #0012fb;
+}
+.Cuswrap .rightBlock .chatBlock .otherBox .content, .Cuswrap .rightBlock .chatBlock .MyBox .content{
+	color: #010101;
+    font-family: "Microsoft JhengHei";
+    display: block;
+    font-size: 13px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.Cuswrap .rightBlock .chatBlock .otherBox .NowTime, .Cuswrap .rightBlock .chatBlock .MyBox .NowTime{
+	font-family: "Microsoft JhengHei";
+	margin: 10px 13px 0 0;
+    font-size: 12px;
+    text-align: right;
+}
+.Cuswrap .rightBlock .tool{
+	height: 38px;
+	width: 100%;
+	background-color: #f7f7f7;
+	border-top: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+    position: relative;
+}
+.Cuswrap .rightBlock .tool .toolList{
+	float: left;
+	list-style: none;
+	margin: 0;
+    padding: 5px 0 0 0;
+}
+.Cuswrap .rightBlock .tool .toolList  li{
+	float: left;
+	padding-left: 10px;
+}
+.Cuswrap .rightBlock textarea{
+	width: 100%;
+    height: 82px;
+    border: 1px #dcdcdc solid;
+    border-top: none;
+    outline: none !important;
+    padding-left: 10px;
+}
+.Cuswrap .sentBlock {
+	background-color: #f7f7f7;
+}
+.Cuswrap .btnBlock{
+	height: 37px;
+	text-align: right;
+    padding-right: 15px;
+    padding-top: 7px;
+}
+.Cuswrap .btnBlock a{
+	display: inline-block;
+    padding: 0px 18px;
+    line-height: 24px;
+    color: white;
+    background: #465d8f;
+    border-radius: 3px/4px 4px 3px 3px;
+    background: -moz-linear-gradient(bottom, #52627b 0%, #7e8c99 100%);
+    background: -webkit-linear-gradient(bottom, #52627b 0%, #7e8c99 100%);
+    background: linear-gradient(to bottom, #52627b 0%, #7e8c99 100%);
+    transition: 0.3s;
+}
+.Cuswrap .btnBlock a:hover{
+	text-decoration: none;
+	opacity: 0.8;
+}
+.clearfix{
+	clear: both;
+}
+.Cuswrap .middleBlock .recentContent{
+	height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #f7f7f7;
+    position: relative;
+}
+.Cuswrap .middleBlock .recentContent .recentContentSearch{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #84909c;
+}
+.Cuswrap .middleBlock .recentContent .recentContentSearch i{
+    font-size: 20px;
+    margin-top: 4px;
+}
+.Cuswrap .middleBlock .recentContent .recentContentSpan{
+	padding: 0;
+    color: black;
+}
+.btncancel{
+    background-image:url(../images/cusClose.png);
+    width:8px;
+    height:8px;
+    border:none;
+    cursor:pointer;
+    background-color:#f7f7f7;
+    background-size:cover;
+    margin-left: 72px;
+    padding-top: 10px;
+    outline:none;
+}
+.logOutAccount .modal-content{
+    top: 113px;
+}
+.logOutAccount .wrap .title{
+    height: 40px;
+    line-height: 40px;
+    width: 600px;
+}
+.logOutAccount .title span{
+    padding-top: 0;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.logOutAccount .contain p{
+    text-align: center;
+    font-family: "Microsoft JhengHei";
+    color: #84909C;
+    font-size: 18px;
+}
+.logOutAccount .contain .confirm{
+    display: inline-block;
+    padding: 5px 25px;
+    color: white;
+    margin-top: 16px;
+    background: #465d8f;
+    border-radius: 3px/4px 4px 3px 3px;
+    background: -moz-linear-gradient(bottom, #465d8f 0%, #6081a2 100%);
+    background: -webkit-linear-gradient(bottom, #465d8f 0%, #6081a2 100%);
+    background: linear-gradient(to bottom, #465d8f 0%, #6081a2 100%);
+    transition: 0.3s;
+}
+.logOutAccount .contain .cancel{
+    display: inline-block;
+    padding: 5px 25px;
+    color: white;
+    margin-top: 16px;
+    border-radius: 3px/4px 4px 3px 3px;
+    background: #90425a;
+    background: -moz-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+    background: -webkit-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+    background: linear-gradient(to bottom, #90425a 0%, #bf698e 100%);
+    transition: 0.3s;
+}
+.logOutAccount .contain .autoClose{
+    font-family: "Microsoft JhengHei";
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #da1a39;
+}
+.logOutAccount .modal-content{
+    width: 600px;
+    margin: 0 auto;
+    top: 153px;
+    box-shadow: 19px 15px 10px -10px #696969;
+    left: -45px;
+}
+.logOutAccount .contain, .logOutAccount .contain{
+    height: 100px;
+}
+.logOutAccount .contain{
+     text-align: left;
+    width: 95%;
+    background-color: #F7F7F7;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    padding-bottom: 10px;
+    height: 90px;
+}
+.logOutAccount .containWrap{
+    height: 125px;
+    width: 600px;
+    /*background-image: url(../images/allbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+.title {
+    position: relative;
+    text-align: left;
+    height: 95px;
+    background-color: rgb(132, 144, 156);
+}
+.Cuswrap .AllConnectMiddleBlock{
+    display: none;
+}
+.Cuswrap .HistroyConnectMiddleBlock{
+    display: none;
+}
+.Cuswrap .HistroyConnectChat{
+    display: none;
+}
+.Cuswrap .AllConnectMiddleBlock .CusListBlock{
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+.Cuswrap .AllConnectMiddleBlock .ContentPerson{
+    display: none;
+}
+.Cuswrap .AllConnectMiddleBlock .ContentPerson a{
+    font-family: "Microsoft JhengHei";
+    font-size: 15px;
+    padding-left: 20px;
+}
+.Cuswrap .AllConnectMiddleBlock .PersonToggleClass{
+    display: block;
+    padding: 3px;
+}
+.Cuswrap .ConnectGroupMiddleBlock{
+    display: none;
+}
+.Cuswrap .ConnectGroupMiddleBlock .CusListBlock{
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+.Cuswrap .ConnectGroupMiddleBlock .GroupControlBtn{
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
+}
+.Cuswrap .ConnectGroupMiddleBlock .MiddleDividers{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 0px;
+    width: 12px;
+    color: black;
+    background-color: black;
+    position: absolute;
+    top: 16px;
+    left: 83px;
+    transform: rotate(90deg);
+}
+.Cuswrap .ConnectGroupMiddleBlock .GroupControlBtn a{
+    font-family: "Microsoft JhengHei";
+    font-size: 15px;
+    padding: 0 10px;
+}
+.Cuswrap .ConnectGroupMiddleBlock .GroupControlBtn .DelGroup{
+    color: #b5223c;
+}
+.Cuswrap .ConnectGroupMiddleBlock .GroupControlBtn .AddGroup{
+    color: #0c0b80;
+}
+.Cuswrap .ConnectGroupMiddleBlock .ContentPerson a{
+    font-family: "Microsoft JhengHei";
+    font-size: 15px;
+    padding-left: 20px;
+}
+.Cuswrap .ConnectGroupMiddleBlock .ContentPerson{
+    display: none;
+}
+.GroupAchat, .GroupBchat{
+    display: none;
+}
+ .modalSetting .modal-content{
+    width: 600px;
+    margin: 0 auto;
+    top: 80px;
+    box-shadow: 19px 15px 10px -10px #696969;
+    left: 20px;
+ }
+  .modalSetting .modal-content .wrap{
+    min-width: 600px;
+    margin: 0 auto;
+  }
+  .modalSetting .wrap .title{
+    height: 40px;
+    line-height: 40px;
+    width: 600px;
+    position: relative;
+    text-align: left;
+    background-color: rgb(132, 144, 156);
+  }
+    .modalSetting .wrap .title span{
+        padding-top: 0;
+        font-size: 20px;
+        padding-left: 20px;
+        display: inline-block;
+        color: white;
+        font-family: "Microsoft JhengHei";
+    }
+    .modalSetting .wrap .cancelBtn{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #f7f7f7 !important;
+        transition: color 0.3s;
+    }
+    .modalSetting .containWrap{
+        height: 350px;
+        width: 600px;
+        background-image: url(../images/allbg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .modalSetting .contain{
+        margin: 0 auto;
+        text-align: left;
+        width: 95%;
+        background-color: #F7F7F7;
+        border-radius: 0px 0px 5px 5px;
+        position: relative;
+        padding-bottom: 10px;
+        height: 335px;
+    }
+    .DelGroupModal .contain .listheader{
+        height: 23px;
+        background-color: #A4B6CA;
+        color: white;
+        text-align: center;
+        font-size: 12px;
+        line-height: 23px;
+        font-family: "Microsoft JhengHei"; 
+    }
+    .DelGroupModal .contain .listInfo{
+        text-align: center;
+        font-size: 12px;
+        line-height: 23px;
+        font-family: "Microsoft JhengHei";
+        border-bottom: 1px solid rgb(211, 211, 211);
+    }
+    .DelGroupModal .contain .listheader > div{
+        padding: 0 5px;
+    }
+    .DelGroupModal .contain .T0{
+        width: 30px;
+    }
+    .DelGroupModal .contain .T1{
+        width: 200px;
+    }
+    .DelGroupModal .contain .T2{
+        width: 340px;
+    }
+    .DelGroupModal .contain .removeCheckBox{
+        position: absolute;
+        top: -6px;
+        right: 5px;
+        margin: 0;
+        -webkit-appearance: checkbox;
+    }
+    .DelGroupModal .contain .removeCheckBoxHead{
+        top: 5px;
+    }
+    .DelGroupModal .contain .btnBlock{
+        margin-top: 115px;
+    }
+    .modalSetting .contain .confirm{
+        display: inline-block;
+        padding: 5px 25px;
+        color: white;
+        margin-top: 16px;
+        background: #465d8f;
+        border-radius: 3px/4px 4px 3px 3px;
+        background: -moz-linear-gradient(bottom, #465d8f 0%, #6081a2 100%);
+        background: -webkit-linear-gradient(bottom, #465d8f 0%, #6081a2 100%);
+        background: linear-gradient(to bottom, #465d8f 0%, #6081a2 100%);
+        transition: 0.3s;
+    }
+    .modalSetting .contain .cancel{
+        display: inline-block;
+        padding: 5px 25px;
+        color: white;
+        margin-top: 16px;
+        border-radius: 3px/4px 4px 3px 3px;
+        background: #90425a;
+        background: -moz-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+        background: -webkit-linear-gradient(bottom, #90425a 0%, #bf698e 100%);
+        background: linear-gradient(to bottom, #90425a 0%, #bf698e 100%);
+        transition: 0.3s;
+    }
+    .modalSetting .contain .confirm:hover,.modalSetting .contain .cancel:hover{
+        text-decoration: none;
+        opacity: 0.5;
+    }
+    .Cuswrap .ConnectGroupMiddleBlock .GroupInnerControl,.Cuswrap .ConnectGroupMiddleBlock .GroupInnerControlII{
+        display: none;
+    }
+    .Cuswrap .ConnectGroupMiddleBlock .GroupInnerControl a, .Cuswrap .ConnectGroupMiddleBlock .GroupInnerControlII a{
+        display: inline-block;
+        padding: 0 5px;
+        width: 85px !important;
+    }
+    .Cuswrap .ConnectGroupMiddleBlock .InnerMiddleDividers{
+        left: 92px;
+    }
+    .Cuswrap .ConnectGroupMiddleBlock .PersonToggleClass{
+        display: block;
+    }
+    .Cuswrap .ConnectGroupMiddleBlock .CusDelBtnII, .Cuswrap .ConnectGroupMiddleBlock .CusDelBtnIII{
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        width: 5%;
+        cursor: pointer;
+        display: none;
+    }
+    .modal-dialog{
+        max-width: 600px !important;
+        margin: 10px !important;
+    }
+    input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder{
+    opacity: 0;
+    }
+    .modalSetting .containWrap .LotteryType{
+        display: inline-block;
+        font-size: 15px;
+        font-family: "Microsoft JhengHei";
+        margin-top: 10px;
+        margin-left: 45px;
+        background-color: #F7F7F7;
+        color: rgb(132, 144, 156);
+        margin-right: 10px;
+    }
+    .modalSetting .containWrap .LotteryNumber{
+        width: 156px;
+        height: 26px;
+        padding: 0;
+        padding-left: 10px;
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-image: none;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+    .modalSetting .containWrap .InviteFriend{
+        width: 320px;
+        height: 200px;
+        border: 1px solid #ced4da;
+        margin: 10px auto;
+        background-color: white;
+        
+    }
+    .modalSetting .containWrap .InviteFriendList{
+        list-style: none;
+        width: 470px;
+        float: left;
+        margin: 0 auto;
+        padding-left: 0; 
+    }
+    .modalSetting .containWrap .InviteFriendList li{
+        float: left;
+        height: 20px;
+        width: 20%;
+        position: relative;
+        padding-left: 25px;
+        line-height: 20px;
+    }
+    .modalSetting .containWrap .InviteFriendList li input{
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        margin: 0;
+        -webkit-appearance: checkbox;
+    }
+    .logOutAccount .modal-dialog{
+        margin: 0 auto !important;
+    }
+    .logOutAccount .contain{
+        height: 130px;
+    }
+    .logOutAccount .containWrap{
+        height: 150px;
+    }
+    .HistroyConnectMiddleBlock .HistroyInput{
+        width: 177px;
+        height: 30px;
+        padding: 0;
+        padding-left: 10px;
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-image: none;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+    }
+    .HistroyConnectMiddleBlock .SearchResult{
+        cursor: pointer;
+        display: none;
+    }
+    .HistroyConnectChat .HistroyChatBLock{
+        opacity: 0;
+    }
+    .HistroyConnectChat .HistroyChatId{
+        opacity: 0;
+    }
+    .tool .active{
+        display: block;
+    }
+    .iConMenu{
+        position: absolute;
+        width: 391px;
+        height: 30px;
+        top: -30px;
+        background-color: #dcdcdc;
+        display: none;
+    }
+    .iConMenu ul{
+        float: left;
+        list-style: none;
+        padding-left: 0;
+    }
+    .iConMenu ul li{
+        float: left;
+        list-style: none;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+    .iConMenu i {
+        margin-top: 7px;
+        cursor: pointer;
+    }

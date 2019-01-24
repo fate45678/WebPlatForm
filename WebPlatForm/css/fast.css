@@ -1,0 +1,410 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    color: #333 !important;
+    min-width: 800px;
+}
+.wrap{
+    min-width: 800px;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.title{
+    position: relative;
+    text-align: left;
+    height: 95px;
+    background-color: rgb(132, 144, 156);
+}
+.title span{
+    display: inline-block;
+    color: white;
+    font-size: 28px;
+    padding-left: 70px;
+    padding-top: 10px;
+    font-family: '微軟正黑體';
+}
+.list{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5px;
+    text-align: center;
+}
+.title .nav-tabs{
+    margin-left: 40px;
+    margin-top: 15px;
+}
+.nav-link{
+    background-color: #a3b6c9;
+    color: #1a3c50;
+}
+.title .nav-item{
+    margin-right: 2px;
+}
+.nav-item .lintBtn{
+    padding: 4px 31px;
+}
+.nav-item .BtnII{
+    padding: 4px 24px;
+}
+.nav-item .BtnIII{
+    padding: 4px 20px;
+}
+.btn:hover{
+    background-color: rgb(238, 238, 238);
+}
+.contain{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.contain .status{
+    height: 30px;
+    background-color: rgb(225, 224, 224);
+}
+.status div{
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    color: #1a3c50;
+    font-size: 15px;
+    font-family: '微軟正黑體';
+}
+.status .first{
+    width: 32%;
+}
+.status .second{
+    width: 32%;
+}
+.status .finnal{
+    width: 32%;
+}
+.status .nowhere{
+    color: #a940a0;
+}
+.info{
+    text-align: left;
+    background-color: #f7f7f7;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-radius: 0px 0px 5px 5px;
+}
+.info .bankName{
+    padding-left: 55px;
+    font-size: 15px;
+    color: #1a3c50;
+    font-family: '微軟正黑體';
+}
+.info .waring{
+    padding-left: 135px;
+    font-size: 12px;
+    text-align: left;
+    color: #1a3c50;
+    font-family: '微軟正黑體';
+}
+.watchOut{
+    color: #a940a0;
+}
+.info .account{
+    padding-left: 25px;
+}
+.info .Alaccount{
+    padding-left: 40px;
+}
+.info .alname{
+    font-size: 12px;
+    text-align: left;
+    color: #a940a0;
+}
+.tab-content{
+    background-image: url(../images/allbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+}
+.explan{
+    font-size: 12px;
+    color: #a940a0;
+    padding-left: 5px;
+    font-family: '微軟正黑體';
+}
+.nextBtn{
+    display: block;
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #43505C;
+    text-align: center;
+    color: white;
+    margin-left: 133px;
+    margin-top: 15px;
+    transition: opacity 0.3s;
+}
+.secondBtn{
+    margin: 0 auto;
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+.backBtn{
+    margin: 0;
+    margin-left: 145px;
+}
+.bank3-2bakcBtn{
+    position: absolute;
+    top: 393px;
+    left: 240px;
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 0px;
+}
+.nextBtn:hover{
+    opacity: 0.5;
+    color: white;
+    text-decoration: none;
+}
+.secondFast{
+    display: inline-block;
+}
+.userInfo{
+    width: 70%;
+    float: left;
+}
+.userInfo .fontSetting{
+    color: #1a3c50;
+    font-size: 14px;
+    font-family: '微軟正黑體';
+    margin-left: 52px;
+}
+.userInfo .hrSetting{
+    margin: 0.5rem auto;
+    background-color: #84909C;
+    width: 80%;
+}
+.userInfo .btnSetting, .selectBank .btnSetting{
+    margin-left: 240px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #43505C;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    font-family: "微軟正黑體";
+}
+.userInfo .btnII{
+    margin-left: 199px;
+}
+.userInfo .btnIII{
+    margin-left: 145px;
+}
+.userInfo .btnIIII{
+    margin-left: 185px;
+}
+.userInfo .btnV{
+    margin-left: 251px;
+}
+.userInfo .bankPsetting{
+    padding-left: 50px;
+    width: 65%;
+}
+.btnSetting:hover{
+    opacity: 0.5;
+}
+.selectBank{
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+.bankbtnIII{
+    display: inline-block;
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #43505C;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    font-family: "微軟正黑體";
+    margin-left: 50px;
+}
+.bank3-3bakcBtn{
+    display: inline-block;
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 0px;
+    margin-left: 175px;
+}
+.bankbtnIII:hover{
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+}
+.selectBank .btnSetting {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 235px;
+}
+.clearfix {
+    clear: both;
+}
+.imptitle{
+    font-size: 16px;
+    color: #1672a7;
+}
+.precautions{
+    margin-top: 20px;
+    font-size: 12px;
+    color: #2c2e2f;
+    margin-left: 50px;
+    padding-bottom: 30px;
+    font-family: '微軟正黑體';
+}
+.bankPIII{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    padding-bottom: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.weChatInfo .detail{
+    float: left;
+    width: 40%;
+    font-family: '微軟正黑體';
+}
+.weChatInfo .precautions{
+    float: left;
+    width: 60%;
+    margin: 0;
+    padding-bottom: 0px;
+    font-family: '微軟正黑體';
+}
+.weChatInfo .detail p{
+    margin-bottom: 15px;
+    padding-left: 50px;
+    color: #1a3c50;
+    font-size: 14px;
+}
+.weChatInfo .detail .warning{
+    color: #a940a0;
+    font-size: 12px;
+}
+.weChatInfo .precautions hr{
+    width: 80%;
+    margin-top: 80px;
+}
+.weChatInfo .warningII{
+    display: inline-block;
+    color: #1672a7;
+    font-size: 16px;
+    margin: 15px 0;
+}
+.weChatInfo .precautions p{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #1a3c50;
+}
+.alipayInfo .userInfo .btnII{
+    margin-left: 227px; 
+}
+.alipayInfo .userInfo .btnIII{
+    margin-left: 162px; 
+}
+.alipayInfo .userInfo .btnIIII{
+    margin-left: 213px; 
+}
+.alipayInfo .userInfo .btnV{
+    margin-left: 251px; 
+}
+.alipayInfo .userInfo .btnVI{
+    margin-left: 186px; 
+}
+.modal-header{
+    color: white;
+    background-color: rgb(132, 144, 156);
+    font-family: "微軟正黑體";
+    padding: 5px 15px !important;
+}
+.modal-title{
+    font-family: "微軟正黑體";
+    font-size: 24px;
+    font-weight: bolder;
+}
+.modal-header .close{
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: 5px !important;
+}
+.modal-body p, .modal-footer p{
+    font-family: "微軟正黑體";
+    font-weight: bold;
+    color: #a940a0;
+    margin-bottom: 0;
+}
+.modal-footer{
+    padding: 10px 15px !important;
+}
+.modal .btnSetting{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #43505C;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    font-family: "微軟正黑體";
+}
+.cancelBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #f7f7f7 !important;
+    transition: color 0.3s;
+}
+.cancelBtn:hover{
+    color: black !important;
+} 
+ .selectBank .btnSetting{
+    padding-top: 2px;
+    width: 170px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #43505C;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    font-family: "微軟正黑體";
+ }
+ .wechat3-2bakcBtn{
+    margin-left: 0;
+    position: absolute;
+    top: 365px;
+    left: 86px;
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 0px;
+ }
+ .alipay3-2bakcBtn{
+    margin-left: 0;
+    position: absolute;
+    top: 370px;
+    right: 255px;
+    width: 170px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 0px;
+ }

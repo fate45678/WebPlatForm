@@ -1,0 +1,317 @@
+﻿body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 900px; }
+    
+.IntelligentChase {
+    width: 900px; height: auto; }
+
+.IntelligentChase .titlebar {
+    width: 900px; height: 64px;
+    background-color: #84909C;
+    text-align:center;
+    position: relative; }
+    
+.IntelligentChase .titlebar .title{
+    width: 900px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    background-color: #84909C; }
+    
+.IntelligentChase .titlebar .title span {
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-left: 70px;
+    font-family: '微軟正黑體'; }
+
+.IntelligentChase .titlebar .list {
+    position: absolute;
+    top: 31px; left: 46px; }
+
+.IntelligentChase .titlebar .list .radio_name {
+    position: absolute;
+    top: 0px; 
+    padding-left: 20px; 
+    color: #C0C5CB; font-size: 15px;
+    font-family: '微軟正黑體'; 
+    cursor: pointer; }
+.IntelligentChase .titlebar .list .radio_icon {
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 15px; height: 15px;
+    background-image: url(../images/IntelligentChase/radio_n.png);
+}   
+.IntelligentChase .titlebar .list #radio_name1 .radio_icon {
+    background-image: url(../images/IntelligentChase/radio_y.png); }
+.IntelligentChase .titlebar .list #radio_name1 {
+    left: 0px; }
+.IntelligentChase .titlebar .list #radio_name2 {
+    left: 166px; }
+.IntelligentChase .titlebar .list #radio_name3 {
+    left: 334px; }
+    
+
+
+.IntelligentChase .titlebar .list .check_name {
+    position: absolute;
+    top: 0px; 
+    padding-left: 20px;
+    color: #C0C5CB; font-size: 15px;
+    font-family: '微軟正黑體';
+    cursor: pointer; }
+.IntelligentChase .titlebar .list #check_name1 {
+    left: 490px; }
+.IntelligentChase .titlebar .list .check_icon {
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 16px; height: 16px;
+    background-image: url(../images/IntelligentChase/check_y.png);
+} 
+    
+.IntelligentChase .contentbg {
+    width: 900px; height: 525px;
+    background-image: url(../images/IntelligentChase/bg.jpg);
+    background-repeat: no-repeat;
+    text-align: center; }
+    
+.IntelligentChase .contentbg .content {
+    width: 830px; height: 500px;
+    background-color: #F7F7F7;
+    margin: 0 auto;
+    border-radius: 0px 0px 5px 5px;
+    text-align: center; }
+.IntelligentChase .contentbg .content .contentoption {
+    position: absolute;
+    top: 61px; left: 32px;
+    width: 100%;
+    color: #84959C; font-size: 15px;
+    font-family: '微軟正黑體';
+}
+.div_chaseType {
+    position: absolute;
+    top: 0px; }
+#div_chaseType1 {
+    display: block;
+    left: 0px;}    
+#div_chaseType2 {
+    display: none;
+    top: 16px;
+    left: 0px; }    
+#div_chaseType3 {
+    display: none;
+    left: 340px; } 
+#div_chaseType4{
+    display: none;
+    left: 0px;
+}   
+
+#div_chaseType1 .label1, #div_chaseType4 .label1 {
+    position: absolute;
+    top: 27px; left: 13px;
+    width: 70px;
+    text-align: left;
+}
+#div_chaseType1 .label2, #div_chaseType4 .label2 {
+    position: absolute;
+    top: 27px; left: 135px;
+    width: 70px;
+    text-align: left;
+}
+#div_chaseType1 .label3, #div_chaseType4 .label3 {
+    position: absolute;
+    top: 27px; left: 255px;
+    width: 70px;
+    text-align: left;
+}
+#div_chaseType1 .option1, #div_chaseType4 .option1 {
+    position: absolute;
+    top: 23px; left: 78px;
+    width: 48px; height: 29px;
+    text-align: center;
+    background-color: White;
+}
+#div_chaseType1 .option2 ,#div_chaseType4 .option2 {
+    position: absolute;
+    top: 23px; left: 200px;
+    width: 48px; height: 29px;
+    text-align: center;
+    background-color: White;
+}
+#div_chaseType1 .option3,#div_chaseType4 .option3  {
+    position: absolute;
+    top: 22px; left: 325px;
+    width: 48px; height: 29px;
+    color: Red;
+    border: 0px;
+    background-color: transparent; 
+}
+
+#div_chaseType2 .label1 {
+    position: absolute;
+    top: 27px; left: 13px;
+    width: 70px;
+    text-align: left;
+}
+#div_chaseType2 .label2 {
+    position: absolute;
+    top: 27px; left: 97px;
+    width: 70px;
+    text-align: left;
+}
+#div_chaseType2 .label3 {
+    position: absolute;
+    top: 27px; left: 198px;
+    width: 70px;
+    text-align: left;
+}
+#div_chaseType2 .label4 {
+    position: absolute;
+    top: 43px; left: 28px;
+    width: 70px;
+    text-align: left;
+}
+#div_chaseType2 .option1 {
+    position: absolute;
+    top: 23px; left: 46px;
+    width: 48px; height: 29px;
+    text-align: center;
+    background-color: White;
+}
+#div_chaseType2 .option2 {
+    position: absolute;
+    top: 23px; left: 146px;
+    width: 48px; height: 29px;
+    text-align: center;
+    background-color: White;
+}
+
+#div_chaseType3 .label1 {
+    position: absolute;
+    top: 27px; left: 13px;
+    width: 90px;
+    text-align: left;
+}
+#div_chaseType3 .label2 {
+    position: absolute;
+    top: 27px; left: 145px;
+    width: 70px;
+    text-align: left;
+}
+#div_chaseType3 .option1 {
+    position: absolute;
+    top: 23px; left: 92px;
+    width: 48px; height: 29px;
+    text-align: center;
+    background-color: White;
+}
+
+.IntelligentChase .contentbg .content .btn1 {
+    position: absolute;
+    top: 22px; left: 584px;
+    width: 132px; height: 24px;
+    font-family: "Microsoft JhengHei";
+    color: White; font-size: 14px;
+    -webkit-border-radius: 3px/4px 4px 3px 3px;
+	-moz-border-radius: 3px/4px 4px 3px 3px;
+	border-radius: 3px/4px 4px 3px 3px;
+	background: #90425a;
+    background: -moz-linear-gradient(top, #90425a 0%,#c26c93 100%);
+    background: -webkit-linear-gradient(top, #90425a 0%,#c26c93 100%);
+    background: linear-gradient(to bottom, #90425a 0%,#c26c93 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90425a', endColorstr='#c26c93',GradientType=0 );
+    padding-top: 1px;
+	cursor: pointer;
+}
+.IntelligentChase .contentbg .content .btn2 {
+    position: absolute;
+    top: 22px; left: 725px;
+    width: 99px; height: 24px;
+    font-family: "Microsoft JhengHei";
+    color: White; font-size: 14px;
+    -webkit-border-radius: 3px/4px 4px 3px 3px;
+	-moz-border-radius: 3px/4px 4px 3px 3px;
+	border-radius: 3px/4px 4px 3px 3px;
+	background: #435A8E;
+    background: -moz-linear-gradient(top, #435A8E 0%,#6182A1 100%);
+    background: -webkit-linear-gradient(top, #435A8E 0%,#6182A1 100%);
+    background: linear-gradient(to bottom, #435A8E 0%,#6182A1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#435A8E', endColorstr='#6182A1',GradientType=0 );
+	padding-top: 1px;
+	cursor: pointer;
+}
+
+.IntelligentChase .contentbg .content .header  {
+    position: absolute;
+    top: 70px; left: 3px;
+    width: 830px; height: 23px;
+    background-color: #A4B6CA; }
+.IntelligentChase .contentbg .content .header div {
+    position: absolute;
+    top: 3px; 
+    height: 20px;
+    text-align: center;
+    font-family: "Microsoft JhengHei";
+    color: White; font-size: 13px;
+}
+.col_1 { left: 22px; width: 82px; }
+.col_2 { left: 104px; width: 122px; }
+.col_3 { left: 226px; width: 146px; }
+.col_4 { left: 372px; width: 92px; }
+.col_5 { left: 464px; width: 136px; }
+.col_6 { left: 600px; width: 82px; }
+.col_7 { left: 682px; width: 150px; }
+
+.IntelligentChase .contentbg .content .gv {
+    position: absolute;
+    top: 93px; left: 3px;
+    width: 830px; height: 291px; 
+    overflow-x: hidden; /*for hiding horizontal scroll bar*/
+    overflow-y: auto; 
+}
+.IntelligentChase .contentbg .content .gv .row {
+    position: absolute;
+    left: 15px; 
+    width: 830px; height: 30px;
+    font-family: "Microsoft JhengHei";
+    color: White; font-size: 14px;
+    border-bottom: 1px solid #A4B6CA;
+}
+.IntelligentChase .contentbg .content .gv .row div {
+    position: absolute;
+    top: 3px; 
+    height: 29px;
+    text-align: center;
+    font-family: "Microsoft JhengHei";
+    color: #84959C; font-size: 14px;
+    padding-top: 2px;
+}
+#row_1 { top: 0px; }
+#row_2 { top: 30px; }
+#row_3 { top: 60px; }
+#row_4 { top: 90px; }
+#row_5 { top: 120px; }
+#row_6 { top: 150px; }
+#row_7 { top: 180px; }
+#row_8 { top: 210px; }
+#row_9 { top: 240px; }
+#row_10 { top: 270px; }
+#row_11 { top: 300px; }
+.IntelligentChase .contentbg .content .gv .check_icon {
+    position: absolute;
+    top: 1px; left: 30px;
+    width: 16px; height: 16px;
+    background-image: url(../images/IntelligentChase/check_n.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+} 
+.col_3 .txt {
+    width: 40px; height: 20px; 
+    text-align: center; } 
+#div_chaseType4 .option1,#div_chaseType4 .option2,#div_chaseType4 .option3 {
+    top: 7px
+ }
+  #div_chaseType4 .label1,  #div_chaseType4 .label2 ,  #div_chaseType4 .label3 {
+    top: 12px;
+ }

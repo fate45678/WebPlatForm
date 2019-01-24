@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.width900 {
+	height: 280px;
+	width: 800px;
+	background-color: #FFFFFF;
+}
+.width900 .top {
+	background-color: #84909c;
+	height: 42px;
+	width: 800px;
+}
+.width900 .middle {
+	float: left;
+	height: 140px;
+	width: 550px;
+	margin-top: 30px;
+	margin-left: 25px;
+	font-size: 20px;
+    text-align:left;
+    font-size:16px;
+}
+.width900 .button1 {
+	width: 170px;
+    height: 25px;
+    line-height: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #43505C;
+    text-align: center;
+    color: white;
+    transition: opacity 0.3s;
+    border: none;
+	margin-left: 600px;
+	float: left;
+
+}
