@@ -22,6 +22,11 @@ namespace WebPlatForm.Controllers
             return PartialView();
         }
 
+        public ActionResult NewUser()
+        {
+            return PartialView();
+        }
+
         public ActionResult LoginCheck(string Account, string Password)
         {
             //var Tpgis = new TpgisRepository();
