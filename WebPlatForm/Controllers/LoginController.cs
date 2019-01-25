@@ -22,6 +22,15 @@ namespace WebPlatForm.Controllers
             return PartialView();
         }
 
+        public ActionResult urgentFreeze()
+        {
+            return PartialView();
+        }
+        public ActionResult agreePage()
+        {
+            return PartialView();
+        }
+
         public ActionResult NewUser()
         {
             return PartialView();
@@ -29,9 +38,6 @@ namespace WebPlatForm.Controllers
 
         public ActionResult LoginCheck(string Account, string Password)
         {
-            //var Tpgis = new TpgisRepository();
-            //string DecodePassWord = Encrypt(UserPassWord);
-            //string incode = Decrypt("g+6vf6FEzITr01oh1NaBXQ==");
             var rep = new login();
             var UserInfo = rep.selectUserInfo(Account, Password).ToList();
             if (UserInfo.Count == 0)
@@ -56,6 +62,51 @@ namespace WebPlatForm.Controllers
 
                 return Json(new { Success = ticket, UserInfo }, JsonRequestBehavior.AllowGet);
             }
+        }
+
+        public ActionResult Logout()
+        {
+            try
+            {
+                FormsAuthentication.SignOut();
+
+                //清除session
+                Session.RemoveAll();
+
+                //建立同名Cookie覆蓋原本Cookie
+                HttpCookie cookie1 = new HttpCookie(FormsAuthentication.FormsCookieName, "");
+                cookie1.Expires = DateTime.Now.AddYears(-1);
+                Response.Cookies.Add(cookie1);
+
+                //建立 ASP.NET Session Cookie
+                HttpCookie cookie2 = new HttpCookie("ASP.NET_SessionId", "");
+                cookie2.Expires = DateTime.Now.AddYears(-1);
+                Response.Cookies.Add(cookie2);
+
+                var identity = HttpContext.User.Identity as FormsIdentity;
+
+                //KWLogger.LogEvent(identity.Ticket.Name, KWLogger.actionType.logout, "");
+                return Json(new { Success = true }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                string error = ex.ToString();
+                return Json(new { Success = false, error }, JsonRequestBehavior.AllowGet);
+            }   
+        }
+
+        public ActionResult Register(string Account, string Password)
+        {
+            var model = new User();
+            model.username = Account.Trim();
+            model.password = Password.Trim();
+            model.regTime = DateTime.Now;
+            model.balance = 0;
+            model.grade = 1;
+
+            var rep = new login();
+            bool isScuess = rep.insertUserinfo(model);
+            return Json(new { Success = isScuess }, JsonRequestBehavior.AllowGet);
         }
     }
 }

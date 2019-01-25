@@ -565,6 +565,8 @@
     <Content Include="Views\urgentFreeze\urgentFreezeLogin.cshtml" />
     <Content Include="Views\Login\urgentFreezeLogin.cshtml" />
     <Content Include="Views\Login\NewUser.cshtml" />
+    <Content Include="Views\Login\urgentFreeze.cshtml" />
+    <Content Include="Views\Login\agreePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

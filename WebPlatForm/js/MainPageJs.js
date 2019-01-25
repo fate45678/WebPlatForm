@@ -1190,10 +1190,10 @@ function generate_onclick() {
             $("#check_gv_icon" + i).css("background-image", "url(~/images/IntelligentChase/check_y.png)");
     if ((count + 1) <= number2) {
         $("#txt_multiple" + i).val(ori_number);
-    count++;
+            count++;
             } else {
         $("#txt_multiple" + i).val(ori_number);
-    ori_number = $("#txt_multiple" + i).val() * multiple2;
+                ori_number = $("#txt_multiple" + i).val() * multiple2;
                 count = 1;
             }
         }
@@ -1201,8 +1201,8 @@ function generate_onclick() {
     if ($("#radio_icon3").css("background-image").indexOf("radio_y.png") > -1) //3
     {
         for (var i = 1; i <= number1; i++) {
-        $("#check_gv_icon" + i).css("background-image", "url(~/images/IntelligentChase/check_y.png)");
-    $("#txt_multiple" + i).val(multiple1);
+            $("#check_gv_icon" + i).css("background-image", "url(~/images/IntelligentChase/check_y.png)");
+            $("#txt_multiple" + i).val(multiple1);
         }
     }
 
@@ -1213,7 +1213,7 @@ function generate_onclick() {
 //登入時候倒數計時
 function getCountIssue() {
     $.ajax({
-        'url': 'GetApiNextIssue',
+        'url': 'Home/GetApiNextIssue',
         'type': 'GET',
         'dataType': 'json',
         'success': function (response) {
@@ -1241,12 +1241,31 @@ function getCountIssue() {
                 $("#MainTenSec").empty().append(seconds.toString().substring(0, 1));
                 $("#MainDigitsSec").empty().append(seconds.toString().substring(1));
             }
+            else if (seconds > 0)
+            {
+                $("#MainTenSec").empty().append(0);
+                $("#MainDigitsSec").empty().append(0);
+            }
             else {
                 $("#MainTenSec").empty().append(0);
                 $("#MainDigitsSec").empty().append(seconds);
             }
             //console.log(" 相差 " + minutes + " 分钟" + seconds + " 秒")
             setInterval(getCountIssue(), 1000);
+        }
+    });
+}
+
+//下注
+function betInsert() {
+    var tableInfo = "";
+    $.ajax({
+        'url': 'Home/betInsert',
+        'type': 'GET',
+        'dataType': 'json',
+        'data': tableInfo,
+        'success': function (response) {
+
         }
     });
 }

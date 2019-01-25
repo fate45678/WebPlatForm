@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using WebPlatForm.Models;
 
 namespace WebPlatForm.Controllers
 {
@@ -42,7 +43,7 @@ namespace WebPlatForm.Controllers
             //JArray ja = new JArray();
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://hyqa.azurewebsites.net/Bet/GetCurrentIssueByGameName?name=QQFFC");
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://hyqa.azurewebsites.net/Bet/GetCurrentIssueByGameName?name=TENCENTFFC");
                 request.Method = WebRequestMethods.Http.Get;
                 request.ContentType = "application/json";
 
@@ -69,6 +70,27 @@ namespace WebPlatForm.Controllers
                 info = ex.ToString();
             }
             return Json(new { data = info }, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult betInsert(string betJsonString)
+        {
+            try
+            {
+                JArray betJa = (JArray)JsonConvert.DeserializeObject(betJsonString);
+                var model = new ShiShiBet();
+                var rep = new Home();
+                foreach (var item in betJa)
+                {
+                    model.betNumber = 0;
+
+                    rep.insertBetInfo(model);                   
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { data = ex.ToString() }, JsonRequestBehavior.AllowGet);
+            }
+            return Json(new { data = true }, JsonRequestBehavior.AllowGet);
         }
     }
 }

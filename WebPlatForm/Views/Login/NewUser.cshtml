@@ -26,8 +26,31 @@
         $("#Password").empty();
         $("#PasswordTiwce").empty();
     }
-    function register() {
 
+    function register() {
+        var Account = $("#Account").val();
+        var Password = $("#Password").val();
+        var PasswordTiwce = $("#PasswordTiwce").val();
+
+        if (Password != PasswordTiwce) {
+            alert("密碼與確認密碼不同")
+        }
+        else {
+                  $.ajax({
+                'url': 'Register',
+                'type': 'GET',
+                'dataType': 'json',
+                'data': { "Account": Account, "Password": Password },
+                'success': function (response) {
+                     if (response.Success == false) {
+                        alert("帳號重複，輸入新帳號名稱");
+                    }
+                    else {
+                        window.location.href = '@Url.Action("Login", "Login")';
+                    }
+                }
+            });
+        } 
     }
 </script>
 <div class="loginall">
@@ -36,16 +59,16 @@
         <div class="content" style="height:270px">
             <div class="itemslist">
                 <input type="text" id="Account" placeholder="请输入註冊用户名称" class="textbox1">
-                <input type="text" id="Password" placeholder="请输入您的密码" class="textbox2">
+                <input type="password" id="Password" placeholder="请输入您的密码" class="textbox2">
                 <div class="borderstyle">
-                    <input type="text" id="PasswordTiwce" placeholder="再次確認密碼" class="textbox3">
+                    <input type="password" id="PasswordTiwce" placeholder="再次確認密碼" class="textbox3">
 
                 </div>
                 <div class="borderstyle">
                     <input type="text" name="firstname" placeholder="请输入验证码" class="textbox3">
                     <img src="~/images/number.jpg" alt=""><span>换一组</span>
                 </div>
-                <a href="#" id="clear" class="a2"><span class="span2" onclick="clear()">清空資料</span></a>
+                <a href="#" class="a2"><span class="span2" onclick="clear()">清空資料</span></a>
                 <a href="#" id="register" class="a2"><span class="span2" onclick="register()">立即註冊</span></a>
                 <div class="ProxyQQBlock">
                     <a id="ProxyQQ">代理QQ|</a>

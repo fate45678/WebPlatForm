@@ -4,7 +4,47 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="hyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="hyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'hy.dbo.ipAddress' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ipAddress">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="loginIP" />
+            <PropertyRef Name="loginUser" />
+            <PropertyRef Name="loginTime" />
+            <PropertyRef Name="loginWebsite" />
+            <PropertyRef Name="loginCountry" />
+            <PropertyRef Name="loginProvince" />
+            <PropertyRef Name="loginCity" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="loginIP" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="loginUser" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="loginTime" Type="datetime" Nullable="false" />
+          <Property Name="loginWebsite" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="loginCountry" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="loginProvince" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="loginCity" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShiShiBet">
+          <Key>
+            <PropertyRef Name="betId" />
+          </Key>
+          <Property Name="betId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userName" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="amount" Type="float" Nullable="false" />
+          <Property Name="betUnit" Type="float" Nullable="false" />
+          <Property Name="betNumber" Type="float" Nullable="false" />
+          <Property Name="playType" Type="int" Nullable="false" />
+          <Property Name="lotteryType" Type="int" Nullable="false" />
+          <Property Name="betTime" Type="datetime" Nullable="false" />
+          <Property Name="serialNumber" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="status" Type="int" Nullable="false" />
+          <Property Name="prize" Type="float" Nullable="false" />
+          <Property Name="position" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="returnRate" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="username" />
@@ -21,10 +61,22 @@
           <Property Name="lastLoginIP" Type="nchar" MaxLength="20" />
         </EntityType>
         <EntityContainer Name="hyModelStoreContainer">
+          <EntitySet Name="ShiShiBet" EntityType="Self.ShiShiBet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ipAddress" EntityType="Self.ipAddress" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ipAddress].[id] AS [id], 
+    [ipAddress].[loginIP] AS [loginIP], 
+    [ipAddress].[loginUser] AS [loginUser], 
+    [ipAddress].[loginTime] AS [loginTime], 
+    [ipAddress].[loginWebsite] AS [loginWebsite], 
+    [ipAddress].[loginCountry] AS [loginCountry], 
+    [ipAddress].[loginProvince] AS [loginProvince], 
+    [ipAddress].[loginCity] AS [loginCity]
+    FROM [dbo].[ipAddress] AS [ipAddress]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="hyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -45,7 +97,47 @@
         </EntityType>
         <EntityContainer Name="hyEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="User" EntityType="Self.User" />
+          <EntitySet Name="ipAddress" EntityType="hyModel.ipAddress" />
+          <EntitySet Name="ShiShiBet" EntityType="hyModel.ShiShiBet" />
         </EntityContainer>
+        <EntityType Name="ipAddress">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="loginIP" />
+            <PropertyRef Name="loginUser" />
+            <PropertyRef Name="loginTime" />
+            <PropertyRef Name="loginWebsite" />
+            <PropertyRef Name="loginCountry" />
+            <PropertyRef Name="loginProvince" />
+            <PropertyRef Name="loginCity" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="loginIP" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="loginUser" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="loginTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="loginWebsite" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="loginCountry" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="loginProvince" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="loginCity" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ShiShiBet">
+          <Key>
+            <PropertyRef Name="betId" />
+          </Key>
+          <Property Name="betId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userName" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="amount" Type="Double" Nullable="false" />
+          <Property Name="betUnit" Type="Double" Nullable="false" />
+          <Property Name="betNumber" Type="Double" Nullable="false" />
+          <Property Name="playType" Type="Int32" Nullable="false" />
+          <Property Name="lotteryType" Type="Int32" Nullable="false" />
+          <Property Name="betTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="serialNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="status" Type="Int32" Nullable="false" />
+          <Property Name="prize" Type="Double" Nullable="false" />
+          <Property Name="position" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="returnRate" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -65,6 +157,39 @@
                 <ScalarProperty Name="team" ColumnName="team" />
                 <ScalarProperty Name="lastLoginTime" ColumnName="lastLoginTime" />
                 <ScalarProperty Name="lastLoginIP" ColumnName="lastLoginIP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ipAddress">
+            <EntityTypeMapping TypeName="hyModel.ipAddress">
+              <MappingFragment StoreEntitySet="ipAddress">
+                <ScalarProperty Name="loginCity" ColumnName="loginCity" />
+                <ScalarProperty Name="loginProvince" ColumnName="loginProvince" />
+                <ScalarProperty Name="loginCountry" ColumnName="loginCountry" />
+                <ScalarProperty Name="loginWebsite" ColumnName="loginWebsite" />
+                <ScalarProperty Name="loginTime" ColumnName="loginTime" />
+                <ScalarProperty Name="loginUser" ColumnName="loginUser" />
+                <ScalarProperty Name="loginIP" ColumnName="loginIP" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShiShiBet">
+            <EntityTypeMapping TypeName="hyModel.ShiShiBet">
+              <MappingFragment StoreEntitySet="ShiShiBet">
+                <ScalarProperty Name="returnRate" ColumnName="returnRate" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="prize" ColumnName="prize" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="serialNumber" ColumnName="serialNumber" />
+                <ScalarProperty Name="betTime" ColumnName="betTime" />
+                <ScalarProperty Name="lotteryType" ColumnName="lotteryType" />
+                <ScalarProperty Name="playType" ColumnName="playType" />
+                <ScalarProperty Name="betNumber" ColumnName="betNumber" />
+                <ScalarProperty Name="betUnit" ColumnName="betUnit" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="betId" ColumnName="betId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

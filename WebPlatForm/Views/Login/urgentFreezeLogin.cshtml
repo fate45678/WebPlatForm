@@ -36,7 +36,7 @@
                 <input type="text" name="firstname" placeholder="请输入银行卡姓名" class="textbox2">
                 <input type="text" name="firstname" placeholder="请输入任一张绑定银行卡号" class="textbox2">
 
-                <a href="#" id="Freeze" class="a2"><span class="span2">紧急冻结帐号</span></a>
+                <a href="@Url.Action("urgentFreeze", "Login")" id="Freeze" class="a2"><span class="span2">紧急冻结帐号</span></a>
                 <a href="" class="urgentFreeze">联络客服</a>
                 | <a href="@Url.Action("Login", "Login")" class="urgentFreeze">取消冻结</a>
                 @*<span class="ContactCustomer">联络客服</span> | <span class="cancleFreeze" herf="@Url.Action("Login", "Login")">取消冻结</span>*@

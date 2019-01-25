@@ -26,5 +26,7 @@ namespace WebPlatForm.Models
         }
     
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<ipAddress> ipAddress { get; set; }
+        public virtual DbSet<ShiShiBet> ShiShiBet { get; set; }
     }
 }
