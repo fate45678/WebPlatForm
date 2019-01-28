@@ -1256,6 +1256,23 @@ function getCountIssue() {
     });
 }
 
+//登出
+function Logout() {
+    $.ajax({
+        'url': 'Login/Logout',
+        'type': 'GET',
+        'dataType': 'json',
+        'success': function (response) {
+            if (response.Success == true) {
+                window.location.href = '@Url.Action("Login", "Login")';
+            }
+            else {
+
+            }
+        }
+    });
+}
+
 //下注
 function betInsert() {
     var tableInfo = "";
