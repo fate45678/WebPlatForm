@@ -1,4 +1,4 @@
-
+//getCountIssue();
 $(document).ready(function () {
     getCountIssue();
     
