@@ -515,6 +515,7 @@
     <Content Include="images\ui-icons_ffffff_256x240.png" />
     <Content Include="images\wechat.png" />
     <Content Include="images\x.png" />
+    <Content Include="js\index.js" />
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="js\jquery-ui.js" />
     <Content Include="js\MainPageJs.js" />

@@ -1210,6 +1210,7 @@ function generate_onclick() {
 
 }
 
+
 //登入時候倒數計時
 function getCountIssue() {
     $.ajax({
@@ -1264,7 +1265,7 @@ function Logout() {
         'dataType': 'json',
         'success': function (response) {
             if (response.Success == true) {
-                window.location.href = '@Url.Action("Login", "Login")';
+                //window.location.href = '@Url.Action("Login", "Login")';
             }
             else {
 
