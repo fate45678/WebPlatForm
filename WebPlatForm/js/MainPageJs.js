@@ -1274,19 +1274,5 @@ function Logout() {
     });
 }
 
-//下注
-function betInsert() {
-    var tableInfo = "";
-    $.ajax({
-        'url': 'Home/betInsert',
-        'type': 'GET',
-        'dataType': 'json',
-        'data': tableInfo,
-        'success': function (response) {
-
-        }
-    });
-}
-
 //讀取現在的
 

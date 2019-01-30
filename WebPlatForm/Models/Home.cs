@@ -14,5 +14,12 @@ namespace WebPlatForm.Models
             db.ShiShiBet.Add(model);
             db.SaveChanges();
         }
+
+        public IEnumerable<ShiShiBet> selectUserBetInfo(string userName)
+        {
+            return from q in db.ShiShiBet
+                   where q.userName == userName
+                   select q;
+        }
     }
 }

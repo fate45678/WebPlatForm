@@ -77,20 +77,34 @@ namespace WebPlatForm.Controllers
             try
             {
                 JArray betJa = (JArray)JsonConvert.DeserializeObject(betJsonString);
+                //var iii = betJa[1]["betid"];
                 var model = new ShiShiBet();
                 var rep = new Home();
                 foreach (var item in betJa)
                 {
-                    model.betNumber = 0;
-
-                    rep.insertBetInfo(model);                   
+                    //model.betId = int.Parse(item["betid"].ToString());
+                    model.userName = item["Name"].ToString();
+                    model.amount = double.Parse(item["amount"].ToString());
+                    model.betUnit = double.Parse(item["betUnit"].ToString());
+                    model.betNumber = 0;//int.Parse(item["betNumber"].ToString());
+                    model.playType = 0; //int.Parse(item["playType"].ToString());
+                    model.lotteryType = 0;//int.Parse(item["lotteryType"].ToString());
+                    model.betTime = DateTime.Now;
+                    model.serialNumber = item["serialNumber"].ToString();
+                    model.status = int.Parse(item["status"].ToString());
+                    model.prize = double.Parse(item["prize"].ToString());
+                    model.position = item["position"].ToString();
+                    model.returnRate = int.Parse(item["returnRate"].ToString());
+                    rep.insertBetInfo(model);
                 }
+
+                var result = rep.selectUserBetInfo(betJa[0]["Name"].ToString()).ToList();
+                return Json(new { data = result }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
             {
                 return Json(new { data = ex.ToString() }, JsonRequestBehavior.AllowGet);
             }
-            return Json(new { data = true }, JsonRequestBehavior.AllowGet);
         }
     }
 }

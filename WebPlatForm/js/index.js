@@ -522,56 +522,124 @@ function removeAllDiv(obj) {
 //userallBet
 
 var betallList = new Array(); //先宣告一維 
-for (var i = 0; i <150; i++) {  //一維長度為2
+for (var i = 0; i < 50; i++) {  //一維長度為2
     betallList[i] = new Array(); //再宣告二維 
 }
-function allBet(playtype1,playtype2,clicknum,){
+//for (var i = 0; i <150; i++) {  //一維長度為2
+//    betallList[i] = new Array(); //再宣告二維 
+//}
 
-    
+function allBet(playtype1,playtype2,UserName,clicknum,){
+
+    var result = new Array();
+    var value = UserName.split(',');
+    var user = value[0].trim();
+    //result.push({ Name: "Apple" , money:"100"});
+
     var showallAnswer ="";
              for (i = 0; i < cont; i++) {
-            showallAnswer += "<div class='listInfo align-items-center d-flex justify-content-around even'  id='mybetList'>";
-            showallAnswer += "<div class='T1' id='betdate' style='display: inline'>";
-            showallAnswer += betlist[i][6];
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T2' id='bettime' style='display: inline'>";
-            showallAnswer += betlist[i][7];
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T3' id='playform' style='display: inline'>";
-            showallAnswer += betlist[i][5];
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T4' id='appType' style='display: inline'>";
-            showallAnswer += betlist[i][0];
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T5' id='appNum' style='display: inline'>";
-            showallAnswer += betlist[i][2];   
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T6' id='oplottertNum' style='display: inline'>";
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T7' id='userbetmoney' style='display: inline'>";
-            showallAnswer += betlist[i][4];
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T8' id='userwinMoney' style='display: inline'>";
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T9' id='winStatus' style='display: inline'>";
-            showallAnswer += "</div>";
-            showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
-            showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
-            showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet()'>";
-            showallAnswer +=  "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
-            showallAnswer += "</div>";                    
-            showallAnswer += "</div>";
-            showallAnswer += "</div>";
+            //showallAnswer += "<div class='listInfo align-items-center d-flex justify-content-around even'  id='mybetList'>";
+            //showallAnswer += "<div class='T1' id='betdate' style='display: inline'>";
+            //showallAnswer += betlist[i][6];
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T2' id='bettime' style='display: inline'>";
+            //showallAnswer += betlist[i][7];
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T3' id='playform' style='display: inline'>";
+            //showallAnswer += betlist[i][5];
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T4' id='appType' style='display: inline'>";
+            //showallAnswer += betlist[i][0];
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T5' id='appNum' style='display: inline'>";
+            //showallAnswer += betlist[i][2];   
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T6' id='oplottertNum' style='display: inline'>";
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T7' id='userbetmoney' style='display: inline'>";
+            //showallAnswer += betlist[i][4];
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T8' id='userwinMoney' style='display: inline'>";
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T9' id='winStatus' style='display: inline'>";
+            //showallAnswer += "</div>";
+            //showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
+            //showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
+            //showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet()'>";
+            //showallAnswer +=  "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
+            //showallAnswer += "</div>";                    
+            //showallAnswer += "</div>";
+            //showallAnswer += "</div>";
+                
+            result.push({
+                betid: 0, Name: user, amount: betlist[i][4], betUnit: 0,
+                betNumber:0 , playType: betlist[i][0], lotteryType:
+                    betlist[i][5], betTime: "", serialNumber: betlist[i][2],
+                status: 0, prize: 0, position: "", returnRate: 0
+            });
 
             for(x = 0; x<8; x++){
                 betlist[i][x] = "";
             }
     }
     
-     $("#myallBet").empty().append(showallAnswer);   
+     //$("#myallBet").empty().append(showallAnswer);   
      $("#showAnswer").empty();
-     cont=0;
+    cont = 0;
 
+    var betJsonString = JSON.stringify(result);
+
+    $.ajax({
+        'url': 'Home/betInsert',
+        'type': 'GET',
+        'dataType': 'json',
+        'data': { "betJsonString" : betJsonString },
+        'success': function (response) {
+
+            var infoCount = response.data.length;
+            var data = response.data;
+            //console.log(response);
+            for (i = 0; i < infoCount; i++) { 
+                showallAnswer += "<div class='listInfo align-items-center d-flex justify-content-around even'  id='mybetList'>";
+                showallAnswer += "<div class='T1' id='betdate' style='display: inline'>";
+                showallAnswer += data[i][6]; //期數
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T2' id='bettime' style='display: inline'>";
+                showallAnswer += data[i]["betTime"]; //時間 
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T3' id='playform' style='display: inline'>";
+                showallAnswer += data[i]["lotteryType"]; //彩種
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T4' id='appType' style='display: inline'>";
+                showallAnswer += data[i]["playType"]; //玩法
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T5' id='appNum' style='display: inline'>";
+                showallAnswer += data[i]["betNumber"];   //投注內容
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T6' id='oplottertNum' style='display: inline'>";
+                showallAnswer += data[i]["serialNumber"];  //開講號
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T7' id='userbetmoney' style='display: inline'>";
+                showallAnswer += data[i]["amount"]; //投注額
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T8' id='userwinMoney' style='display: inline'>";
+                showallAnswer += data[i]["prize"]; //獎金
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T9' id='winStatus' style='display: inline'>";
+                showallAnswer += data[i]["status"]; //狀態
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
+                showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
+                showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet()'>";
+                showallAnswer +=  "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
+                showallAnswer += "</div>";                    
+                showallAnswer += "</div>";
+                showallAnswer += "</div>";
+            }
+
+            $("#myallBet").empty().append(showallAnswer);
+        }
+    });
 }
 
 function onetimebet(playtype1,playtype2,clicknum,betmoney){
