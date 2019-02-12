@@ -121,5 +121,20 @@ namespace WebPlatForm.Controllers
                 return Json(new { data = ex.ToString() }, JsonRequestBehavior.AllowGet);
             }
         }
+        public void betCancelUpdate(string betid)
+        {
+            try
+            {
+                var rep = new Home();
+                rep.updateUserBetInfo(betid);
+
+                //return Json(new { data = result }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                var iii = ex.ToString();
+                //return Json(new { data = ex.ToString() }, JsonRequestBehavior.AllowGet);
+            }
+        }       
     }
 }

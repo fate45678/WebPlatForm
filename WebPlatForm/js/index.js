@@ -628,11 +628,14 @@ function allBet(playtype1,playtype2,UserName,clicknum,){
                 showallAnswer += data[i]["prize"]; //獎金
                 showallAnswer += "</div>";
                 showallAnswer += "<div class='T9' id='winStatus' style='display: inline'>";
-                showallAnswer += data[i]["status"]; //狀態
+                if (data[i]["status"] == 0)
+                    showallAnswer += data[i]["status"]; //狀態
+                else
+                    showallAnswer += "撤单"; //狀態
                 showallAnswer += "</div>";
                 showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
                 showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
-                showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] + ")'>";//betId
+                showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] + "," + i + ")'>";//betId
                 showallAnswer +=  "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
                 showallAnswer += "</div>";                    
                 showallAnswer += "</div>";
@@ -680,7 +683,7 @@ function onetimebet(playtype1,playtype2,clicknum,betmoney){
             showallAnswer += "</div>";
             showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
             showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
-            showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] + "," +i +")'>";//betId
+            showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] + "," + i +")'>";//betId
             showallAnswer +=  "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
             showallAnswer += "</div>";                    
             showallAnswer += "</div>";
@@ -698,11 +701,20 @@ function onetimebet(playtype1,playtype2,clicknum,betmoney){
 
 //撤單  
 function cancelBet(betid, childrenNum) {
-    var changeDiv = document.getElementById('myallBet');
-    var cancaltheBet = document.getElementById('statusUser').innerHTML = "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
+    var changeDiv = document.getElementById('myallBet').children[childrenNum];
+    var cancaltheBet = changeDiv.children[9].innerHTML = "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
+    var betStatus = changeDiv.children[8].innerHTML = "撤单";
 
-    //children[0]
-    var betStatus = document.getElementById('winStatus').innerHTML="撤单";
+    $.ajax({
+        'url': 'Home/betCancelUpdate',
+        'type': 'GET',
+        'dataType': 'json',
+        'data': { "betid": betid },
+        'success': function (response) {
+
+            $("#myallBet").empty().append(showallAnswer);
+        }
+    });
 }
 
 

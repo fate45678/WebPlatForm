@@ -1313,13 +1313,18 @@ function selectBetInfo(user) {
                 showallAnswer += data[i]["prize"]; //獎金
                 showallAnswer += "</div>";
                 showallAnswer += "<div class='T9' id='winStatus' style='display: inline'>";
-                showallAnswer += data[i]["status"]; //狀態
+                if (data[i]["status"] == 0)
+                    showallAnswer += data[i]["status"]; //狀態
+                else
+                    showallAnswer += "撤单"; //狀態
                 showallAnswer += "</div>";
                 showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
                 showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
-                showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] +")'>";//betId
-                showallAnswer += "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
-                showallAnswer += "</div>";
+                if (data[i]["status"] == 0) {
+                    showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] + "," + i + ")'>";//betId
+                    showallAnswer += "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
+                    showallAnswer += "</div>";
+                }
                 showallAnswer += "</div>";
                 showallAnswer += "</div>";
             }
