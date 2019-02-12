@@ -44,15 +44,15 @@ namespace WebPlatForm.Controllers
                 return Json(new { Success = false }, JsonRequestBehavior.AllowGet);
             else
             {
-                Session["UserAccount"] = UserInfo[0].username;
+                Session["UserAccount"] = UserInfo[0].username.Trim();
 
                 var ticket = new FormsAuthenticationTicket(
                 version: 1,
-                name: UserInfo[0].username,
+                name: UserInfo[0].username.Trim(),
                 issueDate: DateTime.Now,
                 expiration: DateTime.Now.AddMinutes(60),
                 isPersistent: false,
-                userData: UserInfo[0].username + "," + UserInfo[0].balance,
+                userData: UserInfo[0].username.Trim() + "," + UserInfo[0].balance,
                 cookiePath: FormsAuthentication.FormsCookiePath);
 
                 var encryptedTicket = FormsAuthentication.Encrypt(ticket);

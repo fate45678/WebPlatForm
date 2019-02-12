@@ -84,21 +84,36 @@ namespace WebPlatForm.Controllers
                 {
                     //model.betId = int.Parse(item["betid"].ToString());
                     model.userName = item["Name"].ToString();
-                    model.amount = double.Parse(item["amount"].ToString());
-                    model.betUnit = double.Parse(item["betUnit"].ToString());
-                    model.betNumber = 0;//int.Parse(item["betNumber"].ToString());
+                    model.amount = decimal.Parse(item["amount"].ToString());
+                    model.betUnit = decimal.Parse(item["betUnit"].ToString());
+                    model.betNumber = item["betNumber"].ToString();
                     model.playType = 0; //int.Parse(item["playType"].ToString());
                     model.lotteryType = 0;//int.Parse(item["lotteryType"].ToString());
                     model.betTime = DateTime.Now;
-                    model.serialNumber = item["serialNumber"].ToString();
+                    model.betIssue = decimal.Parse(item["betIssue"].ToString());
+                    model.serialNumber = null;//item["serialNumber"].ToString();
                     model.status = int.Parse(item["status"].ToString());
-                    model.prize = double.Parse(item["prize"].ToString());
+                    model.prize = decimal.Parse(item["prize"].ToString());
                     model.position = item["position"].ToString();
                     model.returnRate = int.Parse(item["returnRate"].ToString());
                     rep.insertBetInfo(model);
                 }
 
                 var result = rep.selectUserBetInfo(betJa[0]["Name"].ToString()).ToList();
+                return Json(new { data = result }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(new { data = ex.ToString() }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        public ActionResult selectBetInfo(string user)
+        {
+            try
+            {
+                var rep = new Home();
+                var result = rep.selectUserBetInfo(user).ToList();
                 return Json(new { data = result }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)

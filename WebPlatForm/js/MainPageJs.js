@@ -1221,7 +1221,7 @@ function getCountIssue() {
             var obj = JSON.parse(response.data);
             //下一期期號
             var SerialNumber = obj["SerialNumber"].toString();
-            $("#NextIssue").empty().append(SerialNumber);
+            $("#shishidate").empty().append(SerialNumber);
             //console.log(obj["CloseTime"]);
             var date1 = new Date();  //开始时间
             var date2 = new Date(obj["CloseTime"]);  //结束时间
@@ -1275,4 +1275,56 @@ function Logout() {
 }
 
 //讀取現在的
+function selectBetInfo(user) {
+    $.ajax({
+        'url': 'Home/selectBetInfo',
+        'type': 'GET',
+        'dataType': 'json',
+        'data': { "user": user },
+        'success': function (response) {
+            var showallAnswer = "";
+            var infoCount = response.data.length;
+            var data = response.data;
+            //console.log(response);
+            for (i = 0; i < infoCount; i++) {
+                showallAnswer += "<div class='listInfo align-items-center d-flex justify-content-around even'  id='mybetList'>";
+                showallAnswer += "<div class='T1' id='betdate' style='display: inline'>";
+                showallAnswer += data[i]["betIssue"]; //期數
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T2' id='bettime' style='display: inline'>";
+                showallAnswer += data[i]["betTime"]; //時間 
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T3' id='playform' style='display: inline'>";
+                showallAnswer += data[i]["lotteryType"]; //彩種
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T4' id='appType' style='display: inline'>";
+                showallAnswer += data[i]["playType"]; //玩法
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T5' id='appNum' style='display: inline'>";
+                showallAnswer += data[i]["betNumber"];   //投注內容
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T6' id='oplottertNum' style='display: inline'>";
+                showallAnswer += data[i]["serialNumber"];  //開講號
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T7' id='userbetmoney' style='display: inline'>";
+                showallAnswer += data[i]["amount"]; //投注額
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T8' id='userwinMoney' style='display: inline'>";
+                showallAnswer += data[i]["prize"]; //獎金
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T9' id='winStatus' style='display: inline'>";
+                showallAnswer += data[i]["status"]; //狀態
+                showallAnswer += "</div>";
+                showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
+                showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
+                showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] +")'>";//betId
+                showallAnswer += "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
+                showallAnswer += "</div>";
+                showallAnswer += "</div>";
+                showallAnswer += "</div>";
+            }
 
+            $("#myallBet").empty().append(showallAnswer);
+        }
+    });
+}

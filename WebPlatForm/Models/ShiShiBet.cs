@@ -16,15 +16,16 @@ namespace WebPlatForm.Models
     {
         public int betId { get; set; }
         public string userName { get; set; }
-        public double amount { get; set; }
-        public double betUnit { get; set; }
-        public double betNumber { get; set; }
+        public decimal amount { get; set; }
+        public decimal betUnit { get; set; }
+        public string betNumber { get; set; }
         public int playType { get; set; }
         public int lotteryType { get; set; }
         public System.DateTime betTime { get; set; }
+        public decimal betIssue { get; set; }
         public string serialNumber { get; set; }
         public int status { get; set; }
-        public double prize { get; set; }
+        public decimal prize { get; set; }
         public string position { get; set; }
         public int returnRate { get; set; }
     }

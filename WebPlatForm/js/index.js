@@ -534,6 +534,7 @@ function allBet(playtype1,playtype2,UserName,clicknum,){
     var result = new Array();
     var value = UserName.split(',');
     var user = value[0].trim();
+    var Issue = document.getElementById('shishidate').innerText;
     //result.push({ Name: "Apple" , money:"100"});
 
     var showallAnswer ="";
@@ -573,8 +574,9 @@ function allBet(playtype1,playtype2,UserName,clicknum,){
                 
             result.push({
                 betid: 0, Name: user, amount: betlist[i][4], betUnit: 0,
-                betNumber:0 , playType: betlist[i][0], lotteryType:
-                    betlist[i][5], betTime: "", serialNumber: betlist[i][2],
+                betNumber: betlist[i][2], playType: betlist[i][0],
+                lotteryType: betlist[i][5], betTime: "",
+                betIssue: Issue , serialNumber: 0,
                 status: 0, prize: 0, position: "", returnRate: 0
             });
 
@@ -602,7 +604,7 @@ function allBet(playtype1,playtype2,UserName,clicknum,){
             for (i = 0; i < infoCount; i++) { 
                 showallAnswer += "<div class='listInfo align-items-center d-flex justify-content-around even'  id='mybetList'>";
                 showallAnswer += "<div class='T1' id='betdate' style='display: inline'>";
-                showallAnswer += data[i][6]; //期數
+                showallAnswer += data[i]["betIssue"]; //期數
                 showallAnswer += "</div>";
                 showallAnswer += "<div class='T2' id='bettime' style='display: inline'>";
                 showallAnswer += data[i]["betTime"]; //時間 
@@ -630,7 +632,7 @@ function allBet(playtype1,playtype2,UserName,clicknum,){
                 showallAnswer += "</div>";
                 showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
                 showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
-                showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet()'>";
+                showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] + ")'>";//betId
                 showallAnswer +=  "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
                 showallAnswer += "</div>";                    
                 showallAnswer += "</div>";
@@ -642,6 +644,7 @@ function allBet(playtype1,playtype2,UserName,clicknum,){
     });
 }
 
+//一鍵撤單
 function onetimebet(playtype1,playtype2,clicknum,betmoney){
     var shishiopen = document.getElementById("shishidate");
     var betlogo = document.getElementById("logoname");
@@ -677,7 +680,7 @@ function onetimebet(playtype1,playtype2,clicknum,betmoney){
             showallAnswer += "</div>";
             showallAnswer += "<div class='T10' id='statusUser' style='display: inline'>";
             showallAnswer += "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
-            showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet()'>";
+            showallAnswer += "<div class='T11' id='cancelall' style='display: inline' onclick='cancelBet(" + data[i]["betId"] + "," +i +")'>";//betId
             showallAnswer +=  "<a  href = '#' class='remove pl-0' ><span>撤单</span></a>";
             showallAnswer += "</div>";                    
             showallAnswer += "</div>";
@@ -694,7 +697,13 @@ function onetimebet(playtype1,playtype2,clicknum,betmoney){
 }
 
 //撤單  
-function cancelBet(){
-var cancaltheBet = document.getElementById('statusUser').innerHTML="<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
-var betStatus = document.getElementById('winStatus').innerHTML="撤单";
+function cancelBet(betid, childrenNum) {
+    var changeDiv = document.getElementById('myallBet');
+    var cancaltheBet = document.getElementById('statusUser').innerHTML = "<a href='#' class='detail pr-0' data-toggle='modal' data-target='.removeBetDetail'><span id='details'>详情</span></a>";
+
+    //children[0]
+    var betStatus = document.getElementById('winStatus').innerHTML="撤单";
 }
+
+
+
