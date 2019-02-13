@@ -80,6 +80,8 @@ namespace WebPlatForm.Controllers
                 //var iii = betJa[1]["betid"];
                 var model = new ShiShiBet();
                 var rep = new Home();
+                Int32 unixTimestamp = (Int32)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+                double unTimeBetTime = (DateTime.Now.AddHours(-8) - new DateTime(1970, 1, 1, 0, 0, 0)).TotalSeconds;
                 foreach (var item in betJa)
                 {
                     //model.betId = int.Parse(item["betid"].ToString());
@@ -89,7 +91,7 @@ namespace WebPlatForm.Controllers
                     model.betNumber = item["betNumber"].ToString();
                     model.playType = 0; //int.Parse(item["playType"].ToString());
                     model.lotteryType = 0;//int.Parse(item["lotteryType"].ToString());
-                    model.betTime = DateTime.Now;
+                    model.betTime = unTimeBetTime;
                     model.betIssue = decimal.Parse(item["betIssue"].ToString());
                     model.serialNumber = null;//item["serialNumber"].ToString();
                     model.status = int.Parse(item["status"].ToString());

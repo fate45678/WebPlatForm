@@ -21,7 +21,7 @@ namespace WebPlatForm.Models
         public string betNumber { get; set; }
         public int playType { get; set; }
         public int lotteryType { get; set; }
-        public System.DateTime betTime { get; set; }
+        public double betTime { get; set; }
         public decimal betIssue { get; set; }
         public string serialNumber { get; set; }
         public int status { get; set; }
