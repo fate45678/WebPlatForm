@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "NewUser";
+}
+<link type="text/css" rel="stylesheet" href="~/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="~/css/Login.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="~/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="~/js/jquery-ui.js"></script>
+<script type="text/javascript" src="~/js/MainPageJs.js"></script>
+<script type="text/javascript">
+        //$(function () {
+        //    $("#login").click(function () {
+        //        window.open('MainSmall.html', '_self', config = 'height=820,width=1260,top=100,left=100', 'toolbar=false,resizable=yes,scrollbars=no');
+        //        //window.close();
+        //        return false;
+        //    });
+        //    $("#chat").click(function () {
+        //        window.open('NotSigned.html', '_blank', config = 'height=602,width=658,top=100,left=100', 'toolbar=false,resizable=yes,scrollbars=no');
+        //        return false;
+        //    });
+        //});
+
+    function clear() {
+        $("#Account").empty();
+        $("#Password").empty();
+        $("#PasswordTiwce").empty();
+    }
+
+    function register() {
+        var Account = $("#Account").val();
+        var Password = $("#Password").val();
+        var PasswordTiwce = $("#PasswordTiwce").val();
+
+        if (Password != PasswordTiwce) {
+            alert("密碼與確認密碼不同")
+        }
+        else {
+                  $.ajax({
+                'url': 'Register',
+                'type': 'GET',
+                'dataType': 'json',
+                'data': { "Account": Account, "Password": Password },
+                'success': function (response) {
+                     if (response.Success == false) {
+                        alert("帳號重複，輸入新帳號名稱");
+                    }
+                    else {
+                        window.location.href = '@Url.Action("Login", "Login")';
+                    }
+                }
+            });
+        } 
+    }
+</script>
+<div class="loginall">
+    <div class="LoginDiv">
+        <div class="titlebar"><div class="verticalcenter"><img src="~/images/logo.png" alt=""></div></div>
+        <div class="content" style="height:270px">
+            <div class="itemslist">
+                <input type="text" id="Account" placeholder="请输入註冊用户名称" class="textbox1">
+                <input type="password" id="Password" placeholder="请输入您的密码" class="textbox2">
+                <div class="borderstyle">
+                    <input type="password" id="PasswordTiwce" placeholder="再次確認密碼" class="textbox3">
+
+                </div>
+                <div class="borderstyle">
+                    <input type="text" name="firstname" placeholder="请输入验证码" class="textbox3">
+                    <img src="~/images/number.jpg" alt=""><span>换一组</span>
+                </div>
+                <a href="#" class="a2"><span class="span2" onclick="clear()">清空資料</span></a>
+                <a href="#" id="register" class="a2"><span class="span2" onclick="register()">立即註冊</span></a>
+                <div class="ProxyQQBlock">
+                    <a id="ProxyQQ">代理QQ|</a>
+                    <div class="Proxywechat">a888588888</div>
+                </div>
+                <a href="#" id="chat">联繫客服|</a>
+                <div class="ProxywechatBlock">
+                    <a id="Proxywechat" class="subProxywechat"><!--<i style="margin: 0 5px;" class="fa fa-user mx-2" aria-hidden="true"></i>-->代理微信</a>
+                    <div class="Proxywechat">123456789</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

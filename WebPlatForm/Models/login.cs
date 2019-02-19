@@ -9,19 +9,19 @@ namespace WebPlatForm.Models
     {
         hyEntities db = new hyEntities();
 
-        public IEnumerable<User> selectUserInfo(string Account, string Password)
+        public IEnumerable<UserInfo> selectUserInfo(string Account, string Password)
         {
-            return from q in db.User
+            return from q in db.UserInfo
                     where q.username == Account && q.password == Password
                     select q;
             
         }
 
-        public bool insertUserinfo(User model)
+        public bool insertUserinfo(UserInfo model)
         {
             try
             {               
-                db.User.Add(model);
+                db.UserInfo.Add(model);
                 db.SaveChanges();
                 return true;              
             }

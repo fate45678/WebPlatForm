@@ -97,7 +97,7 @@ namespace WebPlatForm.Controllers
 
         public ActionResult Register(string Account, string Password)
         {
-            var model = new User();
+            var model = new UserInfo();
             model.username = Account.Trim();
             model.password = Password.Trim();
             model.regTime = DateTime.Now;

@@ -25,8 +25,8 @@ namespace WebPlatForm.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<User> User { get; set; }
         public virtual DbSet<ipAddress> ipAddress { get; set; }
         public virtual DbSet<ShiShiBet> ShiShiBet { get; set; }
+        public virtual DbSet<UserInfo> UserInfo { get; set; }
     }
 }

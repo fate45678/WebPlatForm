@@ -178,7 +178,7 @@
     <Compile Include="Models\ShiShiBet.cs">
       <DependentUpon>hyDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\User.cs">
+    <Compile Include="Models\UserInfo.cs">
       <DependentUpon>hyDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\WebSiteHelper.cs" />
@@ -562,6 +562,19 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\urgentFreeze\urgentFreezeLogin.cshtml" />
+    <Content Include="Views\Login\urgentFreezeLogin.cshtml" />
+    <Content Include="Views\Login\NewUser.cshtml" />
+    <Content Include="Views\Login\urgentFreeze.cshtml" />
+    <Content Include="Views\Login\agreePage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

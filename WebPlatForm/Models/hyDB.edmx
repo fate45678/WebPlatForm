@@ -46,7 +46,7 @@
           <Property Name="position" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="returnRate" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="User">
+        <EntityType Name="UserInfo">
           <Key>
             <PropertyRef Name="username" />
           </Key>
@@ -63,7 +63,7 @@
         </EntityType>
         <EntityContainer Name="hyModelStoreContainer">
           <EntitySet Name="ShiShiBet" EntityType="Self.ShiShiBet" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ipAddress" EntityType="Self.ipAddress" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [ipAddress].[id] AS [id], 
@@ -81,25 +81,10 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="hyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="User">
-          <Key>
-            <PropertyRef Name="username" />
-          </Key>
-          <Property Name="username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="regTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="balance" Type="Double" Nullable="false" />
-          <Property Name="bankName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
-          <Property Name="cardNumber" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="grade" Type="Int32" Nullable="false" />
-          <Property Name="team" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
-          <Property Name="lastLoginTime" Type="DateTime" Precision="3" />
-          <Property Name="lastLoginIP" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
-        </EntityType>
         <EntityContainer Name="hyEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="User" EntityType="Self.User" />
           <EntitySet Name="ipAddress" EntityType="hyModel.ipAddress" />
           <EntitySet Name="ShiShiBet" EntityType="hyModel.ShiShiBet" />
+          <EntitySet Name="UserInfo" EntityType="hyModel.UserInfo" />
         </EntityContainer>
         <EntityType Name="ipAddress">
           <Key>
@@ -140,28 +125,27 @@
           <Property Name="position" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Name="returnRate" Type="Int32" Nullable="false" />
         </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="regTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="balance" Type="Double" Nullable="false" />
+          <Property Name="bankName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="cardNumber" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="grade" Type="Int32" Nullable="false" />
+          <Property Name="team" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="lastLoginTime" Type="DateTime" Precision="3" />
+          <Property Name="lastLoginIP" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="hyModelStoreContainer" CdmEntityContainer="hyEntities">
-          <EntitySetMapping Name="User">
-            <EntityTypeMapping TypeName="hyModel.User">
-              <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="regTime" ColumnName="regTime" />
-                <ScalarProperty Name="balance" ColumnName="balance" />
-                <ScalarProperty Name="bankName" ColumnName="bankName" />
-                <ScalarProperty Name="cardNumber" ColumnName="cardNumber" />
-                <ScalarProperty Name="grade" ColumnName="grade" />
-                <ScalarProperty Name="team" ColumnName="team" />
-                <ScalarProperty Name="lastLoginTime" ColumnName="lastLoginTime" />
-                <ScalarProperty Name="lastLoginIP" ColumnName="lastLoginIP" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ipAddress">
             <EntityTypeMapping TypeName="hyModel.ipAddress">
               <MappingFragment StoreEntitySet="ipAddress">
@@ -193,6 +177,22 @@
                 <ScalarProperty Name="amount" ColumnName="amount" />
                 <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="betId" ColumnName="betId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfo">
+            <EntityTypeMapping TypeName="hyModel.UserInfo">
+              <MappingFragment StoreEntitySet="UserInfo">
+                <ScalarProperty Name="lastLoginIP" ColumnName="lastLoginIP" />
+                <ScalarProperty Name="lastLoginTime" ColumnName="lastLoginTime" />
+                <ScalarProperty Name="team" ColumnName="team" />
+                <ScalarProperty Name="grade" ColumnName="grade" />
+                <ScalarProperty Name="cardNumber" ColumnName="cardNumber" />
+                <ScalarProperty Name="bankName" ColumnName="bankName" />
+                <ScalarProperty Name="balance" ColumnName="balance" />
+                <ScalarProperty Name="regTime" ColumnName="regTime" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

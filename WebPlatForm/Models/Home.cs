@@ -26,7 +26,7 @@ namespace WebPlatForm.Models
 
         public void updateUserBetInfo(string betid)
         {
-            var fromDB = db.ShiShiBet.Find(int.Parse(betid)); ;
+            var fromDB = db.ShiShiBet.Find(int.Parse(betid));
             fromDB.status = 1;
             db.SaveChanges();
         }

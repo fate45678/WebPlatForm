@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "urgentFreezeLogin";
+}
+<link type="text/css" rel="stylesheet" href="~/css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="~/css/Login.css" />
+<script type="text/javascript" src="~/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="~/js/jquery-ui.js"></script>
+<script type="text/javascript" src="~/js/MainPageJs.js"></script>
+<script type="text/javascript">
+        //$(function () {
+        //    $("#Freeze").click(function () {
+        //        window.open('urgentFreeze.html', '_self', config = 'height=820,width=1260,top=100,left=100', 'toolbar=false,resizable=yes,scrollbars=no');
+        //        return false;
+        //    });
+        //    $(".cancleFreeze").click(function () {
+        //        window.open('Login.html', '_self', config = 'height=820,width=1260,top=100,left=100', 'toolbar=false,resizable=yes,scrollbars=no');
+        //        return false;
+        //    });
+        //    $(".ContactCustomer").click(function () {
+        //        window.open('CustomerService.html', '_blank', config = 'height=602,width=658,top=100,left=100', 'toolbar=false,resizable=yes,scrollbars=no');
+        //        return false;
+        //    });
+        //});
+</script>
+
+<div class="loginall">
+    <div class="LoginDiv">
+        <div class="titlebar"><div class="verticalcenter"><img src="~/images/logo.png" alt=""></div></div>
+        <div class="content">
+            <div class="itemslist">
+                <input type="text" name="firstname" placeholder="请输入您的帐号" class="textbox1">
+                <input type="text" name="firstname" placeholder="请输入您的密保答案" class="textbox2">
+                <span class="PassQuestionTips">密保问题提示</span>
+                <div class="PassQuestionTipsBlock">请问你母亲的姓氏是？</div>
+                <input type="text" name="firstname" placeholder="请输入银行卡姓名" class="textbox2">
+                <input type="text" name="firstname" placeholder="请输入任一张绑定银行卡号" class="textbox2">
+
+                <a href="@Url.Action("urgentFreeze", "Login")" id="Freeze" class="a2"><span class="span2">紧急冻结帐号</span></a>
+                <a href="" class="urgentFreeze">联络客服</a>
+                | <a href="@Url.Action("Login", "Login")" class="urgentFreeze">取消冻结</a>
+                @*<span class="ContactCustomer">联络客服</span> | <span class="cancleFreeze" herf="@Url.Action("Login", "Login")">取消冻结</span>*@
+            </div>
+        </div>
+    </div>
+</div>
+
